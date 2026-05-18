@@ -11,6 +11,7 @@ const NAV = [
   { href: "/admin/import", label: "Import" },
   { href: "/admin/marketing", label: "Marketing" },
   { href: "/admin/tracking", label: "Tracking" },
+  { href: "/admin/revenue", label: "Einnahmen-Import" },
   { href: "/admin/autopilot", label: "Autopilot" },
   { href: "/admin/settings", label: "Einstellungen" },
 ];

@@ -31,7 +31,11 @@ Inhalte dürfen nicht als Steuer-, Finanz- oder Rechtsberatung verstanden werden
 
 - Tracking-IDs sind nur aktiv, wenn gesetzt.
 - GA, GTM, Meta Pixel, TikTok Pixel erst **nach Einwilligung** des Nutzers laden.
-- Aktuelles Setup: Skripte werden geladen, sobald IDs vorhanden. Erweitere die Einbindung um einen Cookie-Banner / Consent-Tool.
+- DeltaCompare hat einen einfachen Consent-Banner (`components/ConsentBanner.tsx`) integriert.
+  Tracking-Skripte (`components/TrackingScripts.tsx`) werden erst geladen, wenn die Einwilligung
+  in `localStorage` unter dem Schlüssel `dc_consent_v1` gespeichert ist.
+- Für rechtssicheren Betrieb empfehlen wir trotzdem ein ausgewachsenes Consent-Tool
+  (z. B. Usercentrics, CookieFirst), sobald du mit echten Trackern produktiv gehst.
 
 ## Aufbewahrungs­pflichten
 

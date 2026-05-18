@@ -100,8 +100,9 @@ export default async function AdminDashboardPage() {
         <section className="rounded-2xl border border-ink-200 bg-white p-5">
           <h2 className="font-semibold text-ink-900">Einnahmen-Import</h2>
           <p className="mt-2 text-sm text-ink-600">
-            Importiere CSV-Berichte deiner Affiliate-Netzwerke unter <Link href="/admin/import" className="text-brand-700 underline">Import</Link>.
-            Die historische Übersicht erscheint nach dem ersten Import.
+            Importiere CSV-Berichte deiner Affiliate-Netzwerke unter{" "}
+            <Link href="/admin/revenue" className="text-brand-700 underline">Einnahmen-Import</Link>. Klicks, Leads,
+            Sales und Umsätze werden dort dauerhaft gespeichert.
           </p>
         </section>
       </div>

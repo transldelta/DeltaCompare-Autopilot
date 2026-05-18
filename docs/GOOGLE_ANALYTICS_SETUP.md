@@ -35,5 +35,6 @@ GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 ## 5. DSGVO
 
 - GA4 erst nach Einwilligung des Nutzers laden.
-- Verwende einen Cookie-Banner oder ein Consent-Tool deiner Wahl.
-- Im aktuellen Setup wird das GA-Skript geladen, sobald die ID gesetzt ist. Für rechtssicheren Betrieb erweitere die Logik um Consent.
+- Der integrierte Consent-Banner (`components/ConsentBanner.tsx`) hält GA4 zurück, bis der Nutzer
+  „Alle akzeptieren“ wählt. Erst dann lädt `TrackingScripts` die GA-/GTM-/Pixel-Skripte.
+- Für rechtssicheren Betrieb empfehlen wir zusätzlich ein professionelles Consent-Tool.
