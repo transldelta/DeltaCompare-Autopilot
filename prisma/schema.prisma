@@ -1,0 +1,138 @@
+// DeltaCompare Autopilot - Prisma Schema
+// Lokal: SQLite. Für Produktion auf PostgreSQL umstellen (provider = "postgresql").
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+}
+
+model Category {
+  id          String          @id @default(cuid())
+  name        String
+  slug        String          @unique
+  description String
+  icon        String          @default("Tag")
+  status      String          @default("active")
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  offers      Offer[]
+  comparisons ComparisonPage[]
+}
+
+model Offer {
+  id                  String   @id @default(cuid())
+  name                String
+  slug                String   @unique
+  categoryId          String
+  category            Category @relation(fields: [categoryId], references: [id])
+  network             String
+  affiliateLink       String
+  trackingId          String   @default("")
+  commissionType      String   @default("Sale")
+  estimatedCommission String   @default("")
+  shortDescription    String
+  longDescription     String
+  advantages          String   @default("")
+  disadvantages       String   @default("")
+  priceNote           String   @default("")
+  rating              Float    @default(4.0)
+  logoUrl             String   @default("")
+  buttonText          String   @default("Zum Anbieter")
+  status              String   @default("active")
+  isFeatured          Boolean  @default(false)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  clicks              ClickEvent[]
+}
+
+model ComparisonPage {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id])
+  seoTitle        String
+  metaDescription String
+  intro           String
+  content         String
+  faq             String
+  offerSlugs      String   @default("")
+  status          String   @default("active")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ClickEvent {
+  id        String   @id @default(cuid())
+  offerId   String
+  offer     Offer    @relation(fields: [offerId], references: [id])
+  pageSlug  String   @default("")
+  referrer  String   @default("")
+  userAgent String   @default("")
+  device    String   @default("")
+  ipHash    String   @default("")
+  createdAt DateTime @default(now())
+
+  @@index([offerId])
+  @@index([createdAt])
+}
+
+model RevenueImport {
+  id          String   @id @default(cuid())
+  network     String
+  date        DateTime
+  clicks      Int      @default(0)
+  leads       Int      @default(0)
+  sales       Int      @default(0)
+  revenue     Float    @default(0)
+  csvFileName String   @default("")
+  createdAt   DateTime @default(now())
+}
+
+model MarketingDraft {
+  id        String   @id @default(cuid())
+  type      String
+  platform  String
+  title     String
+  content   String
+  targetUrl String   @default("")
+  status    String   @default("draft")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AdCampaignDraft {
+  id              String   @id @default(cuid())
+  platform        String
+  campaignName    String
+  targetUrl       String
+  audience        String   @default("")
+  keywords        String   @default("")
+  headlines       String   @default("")
+  descriptions    String   @default("")
+  suggestedBudget String   @default("")
+  riskNote        String   @default("")
+  status          String   @default("draft")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Settings {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

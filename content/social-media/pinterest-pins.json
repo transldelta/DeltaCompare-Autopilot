@@ -1,0 +1,902 @@
+[
+  {
+    "id": "pin-1",
+    "platform": "Pinterest",
+    "topic": "Geschäftskonto für Selbstständige",
+    "title": "Geschäftskonto für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Geschäftskonto für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-geschaeftskonten-fuer-selbststaendige",
+    "altText": "Geschäftskonto für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-2",
+    "platform": "Pinterest",
+    "topic": "Business-Kreditkarte",
+    "title": "Business-Kreditkarte – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Business-Kreditkarte-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-kreditkarten-fuer-selbststaendige",
+    "altText": "Business-Kreditkarte im Vergleich"
+  },
+  {
+    "id": "pin-3",
+    "platform": "Pinterest",
+    "topic": "Buchhaltungssoftware",
+    "title": "Buchhaltungssoftware – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Buchhaltungssoftware-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-buchhaltungssoftware",
+    "altText": "Buchhaltungssoftware im Vergleich"
+  },
+  {
+    "id": "pin-4",
+    "platform": "Pinterest",
+    "topic": "Rechnungsprogramm",
+    "title": "Rechnungsprogramm – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Rechnungsprogramm-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-rechnungsprogramme",
+    "altText": "Rechnungsprogramm im Vergleich"
+  },
+  {
+    "id": "pin-5",
+    "platform": "Pinterest",
+    "topic": "Steuer-Tool",
+    "title": "Steuer-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Steuer-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-steuer-tools-fuer-selbststaendige",
+    "altText": "Steuer-Tool im Vergleich"
+  },
+  {
+    "id": "pin-6",
+    "platform": "Pinterest",
+    "topic": "Shopify-Tools",
+    "title": "Shopify-Tools – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Shopify-Tools-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-shopify-tools",
+    "altText": "Shopify-Tools im Vergleich"
+  },
+  {
+    "id": "pin-7",
+    "platform": "Pinterest",
+    "topic": "Website-Builder",
+    "title": "Website-Builder – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Website-Builder-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-website-builder",
+    "altText": "Website-Builder im Vergleich"
+  },
+  {
+    "id": "pin-8",
+    "platform": "Pinterest",
+    "topic": "Hosting-Anbieter",
+    "title": "Hosting-Anbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Hosting-Anbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-hosting-anbieter",
+    "altText": "Hosting-Anbieter im Vergleich"
+  },
+  {
+    "id": "pin-9",
+    "platform": "Pinterest",
+    "topic": "CRM-System",
+    "title": "CRM-System – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den CRM-System-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-crm-systeme",
+    "altText": "CRM-System im Vergleich"
+  },
+  {
+    "id": "pin-10",
+    "platform": "Pinterest",
+    "topic": "E-Mail-Marketing-Tool",
+    "title": "E-Mail-Marketing-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den E-Mail-Marketing-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-e-mail-marketing-tools",
+    "altText": "E-Mail-Marketing-Tool im Vergleich"
+  },
+  {
+    "id": "pin-11",
+    "platform": "Pinterest",
+    "topic": "Versicherung für Selbstständige",
+    "title": "Versicherung für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Versicherung für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-versicherungen-fuer-selbststaendige",
+    "altText": "Versicherung für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-12",
+    "platform": "Pinterest",
+    "topic": "Private Krankenversicherung",
+    "title": "Private Krankenversicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Private Krankenversicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/private-krankenversicherung-vergleich",
+    "altText": "Private Krankenversicherung im Vergleich"
+  },
+  {
+    "id": "pin-13",
+    "platform": "Pinterest",
+    "topic": "Kfz-Versicherung",
+    "title": "Kfz-Versicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Kfz-Versicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/kfz-versicherung-vergleich",
+    "altText": "Kfz-Versicherung im Vergleich"
+  },
+  {
+    "id": "pin-14",
+    "platform": "Pinterest",
+    "topic": "DSL/Glasfaser",
+    "title": "DSL/Glasfaser – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den DSL/Glasfaser-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/dsl-vergleich",
+    "altText": "DSL/Glasfaser im Vergleich"
+  },
+  {
+    "id": "pin-15",
+    "platform": "Pinterest",
+    "topic": "Strom & Gas",
+    "title": "Strom & Gas – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Strom & Gas-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/strom-und-gasvergleich",
+    "altText": "Strom & Gas im Vergleich"
+  },
+  {
+    "id": "pin-16",
+    "platform": "Pinterest",
+    "topic": "Scanner",
+    "title": "Scanner – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Scanner-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-scanner-fuer-selbststaendige",
+    "altText": "Scanner im Vergleich"
+  },
+  {
+    "id": "pin-17",
+    "platform": "Pinterest",
+    "topic": "Drucker",
+    "title": "Drucker – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Drucker-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-drucker-fuer-buero-und-homeoffice",
+    "altText": "Drucker im Vergleich"
+  },
+  {
+    "id": "pin-18",
+    "platform": "Pinterest",
+    "topic": "Headset",
+    "title": "Headset – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Headset-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-headsets-fuer-online-meetings",
+    "altText": "Headset im Vergleich"
+  },
+  {
+    "id": "pin-19",
+    "platform": "Pinterest",
+    "topic": "Tools für Dolmetscher",
+    "title": "Tools für Dolmetscher – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Tools für Dolmetscher-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-tools-fuer-dolmetscher-und-uebersetzer",
+    "altText": "Tools für Dolmetscher im Vergleich"
+  },
+  {
+    "id": "pin-20",
+    "platform": "Pinterest",
+    "topic": "Apps für Selbstständige",
+    "title": "Apps für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Apps für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-apps-fuer-selbststaendige",
+    "altText": "Apps für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-21",
+    "platform": "Pinterest",
+    "topic": "Projektmanagement-Tool",
+    "title": "Projektmanagement-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Projektmanagement-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-projektmanagement-tools",
+    "altText": "Projektmanagement-Tool im Vergleich"
+  },
+  {
+    "id": "pin-22",
+    "platform": "Pinterest",
+    "topic": "Terminbuchungs-Tool",
+    "title": "Terminbuchungs-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Terminbuchungs-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-terminbuchungs-tools",
+    "altText": "Terminbuchungs-Tool im Vergleich"
+  },
+  {
+    "id": "pin-23",
+    "platform": "Pinterest",
+    "topic": "Online-Zahlungsanbieter",
+    "title": "Online-Zahlungsanbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Online-Zahlungsanbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-online-zahlungsanbieter",
+    "altText": "Online-Zahlungsanbieter im Vergleich"
+  },
+  {
+    "id": "pin-24",
+    "platform": "Pinterest",
+    "topic": "KI-Tool",
+    "title": "KI-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den KI-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-ki-tools-fuer-selbststaendige",
+    "altText": "KI-Tool im Vergleich"
+  },
+  {
+    "id": "pin-25",
+    "platform": "Pinterest",
+    "topic": "Dokumentenmanagement",
+    "title": "Dokumentenmanagement – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Dokumentenmanagement-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-dokumentenmanagement-tools",
+    "altText": "Dokumentenmanagement im Vergleich"
+  },
+  {
+    "id": "pin-26",
+    "platform": "Pinterest",
+    "topic": "Geschäftskonto für Selbstständige",
+    "title": "Geschäftskonto für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Geschäftskonto für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-geschaeftskonten-fuer-selbststaendige",
+    "altText": "Geschäftskonto für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-27",
+    "platform": "Pinterest",
+    "topic": "Business-Kreditkarte",
+    "title": "Business-Kreditkarte – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Business-Kreditkarte-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-kreditkarten-fuer-selbststaendige",
+    "altText": "Business-Kreditkarte im Vergleich"
+  },
+  {
+    "id": "pin-28",
+    "platform": "Pinterest",
+    "topic": "Buchhaltungssoftware",
+    "title": "Buchhaltungssoftware – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Buchhaltungssoftware-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-buchhaltungssoftware",
+    "altText": "Buchhaltungssoftware im Vergleich"
+  },
+  {
+    "id": "pin-29",
+    "platform": "Pinterest",
+    "topic": "Rechnungsprogramm",
+    "title": "Rechnungsprogramm – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Rechnungsprogramm-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-rechnungsprogramme",
+    "altText": "Rechnungsprogramm im Vergleich"
+  },
+  {
+    "id": "pin-30",
+    "platform": "Pinterest",
+    "topic": "Steuer-Tool",
+    "title": "Steuer-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Steuer-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-steuer-tools-fuer-selbststaendige",
+    "altText": "Steuer-Tool im Vergleich"
+  },
+  {
+    "id": "pin-31",
+    "platform": "Pinterest",
+    "topic": "Shopify-Tools",
+    "title": "Shopify-Tools – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Shopify-Tools-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-shopify-tools",
+    "altText": "Shopify-Tools im Vergleich"
+  },
+  {
+    "id": "pin-32",
+    "platform": "Pinterest",
+    "topic": "Website-Builder",
+    "title": "Website-Builder – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Website-Builder-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-website-builder",
+    "altText": "Website-Builder im Vergleich"
+  },
+  {
+    "id": "pin-33",
+    "platform": "Pinterest",
+    "topic": "Hosting-Anbieter",
+    "title": "Hosting-Anbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Hosting-Anbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-hosting-anbieter",
+    "altText": "Hosting-Anbieter im Vergleich"
+  },
+  {
+    "id": "pin-34",
+    "platform": "Pinterest",
+    "topic": "CRM-System",
+    "title": "CRM-System – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den CRM-System-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-crm-systeme",
+    "altText": "CRM-System im Vergleich"
+  },
+  {
+    "id": "pin-35",
+    "platform": "Pinterest",
+    "topic": "E-Mail-Marketing-Tool",
+    "title": "E-Mail-Marketing-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den E-Mail-Marketing-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-e-mail-marketing-tools",
+    "altText": "E-Mail-Marketing-Tool im Vergleich"
+  },
+  {
+    "id": "pin-36",
+    "platform": "Pinterest",
+    "topic": "Versicherung für Selbstständige",
+    "title": "Versicherung für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Versicherung für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-versicherungen-fuer-selbststaendige",
+    "altText": "Versicherung für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-37",
+    "platform": "Pinterest",
+    "topic": "Private Krankenversicherung",
+    "title": "Private Krankenversicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Private Krankenversicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/private-krankenversicherung-vergleich",
+    "altText": "Private Krankenversicherung im Vergleich"
+  },
+  {
+    "id": "pin-38",
+    "platform": "Pinterest",
+    "topic": "Kfz-Versicherung",
+    "title": "Kfz-Versicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Kfz-Versicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/kfz-versicherung-vergleich",
+    "altText": "Kfz-Versicherung im Vergleich"
+  },
+  {
+    "id": "pin-39",
+    "platform": "Pinterest",
+    "topic": "DSL/Glasfaser",
+    "title": "DSL/Glasfaser – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den DSL/Glasfaser-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/dsl-vergleich",
+    "altText": "DSL/Glasfaser im Vergleich"
+  },
+  {
+    "id": "pin-40",
+    "platform": "Pinterest",
+    "topic": "Strom & Gas",
+    "title": "Strom & Gas – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Strom & Gas-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/strom-und-gasvergleich",
+    "altText": "Strom & Gas im Vergleich"
+  },
+  {
+    "id": "pin-41",
+    "platform": "Pinterest",
+    "topic": "Scanner",
+    "title": "Scanner – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Scanner-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-scanner-fuer-selbststaendige",
+    "altText": "Scanner im Vergleich"
+  },
+  {
+    "id": "pin-42",
+    "platform": "Pinterest",
+    "topic": "Drucker",
+    "title": "Drucker – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Drucker-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-drucker-fuer-buero-und-homeoffice",
+    "altText": "Drucker im Vergleich"
+  },
+  {
+    "id": "pin-43",
+    "platform": "Pinterest",
+    "topic": "Headset",
+    "title": "Headset – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Headset-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-headsets-fuer-online-meetings",
+    "altText": "Headset im Vergleich"
+  },
+  {
+    "id": "pin-44",
+    "platform": "Pinterest",
+    "topic": "Tools für Dolmetscher",
+    "title": "Tools für Dolmetscher – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Tools für Dolmetscher-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-tools-fuer-dolmetscher-und-uebersetzer",
+    "altText": "Tools für Dolmetscher im Vergleich"
+  },
+  {
+    "id": "pin-45",
+    "platform": "Pinterest",
+    "topic": "Apps für Selbstständige",
+    "title": "Apps für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Apps für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-apps-fuer-selbststaendige",
+    "altText": "Apps für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-46",
+    "platform": "Pinterest",
+    "topic": "Projektmanagement-Tool",
+    "title": "Projektmanagement-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Projektmanagement-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-projektmanagement-tools",
+    "altText": "Projektmanagement-Tool im Vergleich"
+  },
+  {
+    "id": "pin-47",
+    "platform": "Pinterest",
+    "topic": "Terminbuchungs-Tool",
+    "title": "Terminbuchungs-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Terminbuchungs-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-terminbuchungs-tools",
+    "altText": "Terminbuchungs-Tool im Vergleich"
+  },
+  {
+    "id": "pin-48",
+    "platform": "Pinterest",
+    "topic": "Online-Zahlungsanbieter",
+    "title": "Online-Zahlungsanbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Online-Zahlungsanbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-online-zahlungsanbieter",
+    "altText": "Online-Zahlungsanbieter im Vergleich"
+  },
+  {
+    "id": "pin-49",
+    "platform": "Pinterest",
+    "topic": "KI-Tool",
+    "title": "KI-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den KI-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-ki-tools-fuer-selbststaendige",
+    "altText": "KI-Tool im Vergleich"
+  },
+  {
+    "id": "pin-50",
+    "platform": "Pinterest",
+    "topic": "Dokumentenmanagement",
+    "title": "Dokumentenmanagement – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Dokumentenmanagement-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-dokumentenmanagement-tools",
+    "altText": "Dokumentenmanagement im Vergleich"
+  },
+  {
+    "id": "pin-51",
+    "platform": "Pinterest",
+    "topic": "Geschäftskonto für Selbstständige",
+    "title": "Geschäftskonto für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Geschäftskonto für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-geschaeftskonten-fuer-selbststaendige",
+    "altText": "Geschäftskonto für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-52",
+    "platform": "Pinterest",
+    "topic": "Business-Kreditkarte",
+    "title": "Business-Kreditkarte – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Business-Kreditkarte-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-kreditkarten-fuer-selbststaendige",
+    "altText": "Business-Kreditkarte im Vergleich"
+  },
+  {
+    "id": "pin-53",
+    "platform": "Pinterest",
+    "topic": "Buchhaltungssoftware",
+    "title": "Buchhaltungssoftware – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Buchhaltungssoftware-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-buchhaltungssoftware",
+    "altText": "Buchhaltungssoftware im Vergleich"
+  },
+  {
+    "id": "pin-54",
+    "platform": "Pinterest",
+    "topic": "Rechnungsprogramm",
+    "title": "Rechnungsprogramm – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Rechnungsprogramm-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-rechnungsprogramme",
+    "altText": "Rechnungsprogramm im Vergleich"
+  },
+  {
+    "id": "pin-55",
+    "platform": "Pinterest",
+    "topic": "Steuer-Tool",
+    "title": "Steuer-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Steuer-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-steuer-tools-fuer-selbststaendige",
+    "altText": "Steuer-Tool im Vergleich"
+  },
+  {
+    "id": "pin-56",
+    "platform": "Pinterest",
+    "topic": "Shopify-Tools",
+    "title": "Shopify-Tools – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Shopify-Tools-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-shopify-tools",
+    "altText": "Shopify-Tools im Vergleich"
+  },
+  {
+    "id": "pin-57",
+    "platform": "Pinterest",
+    "topic": "Website-Builder",
+    "title": "Website-Builder – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Website-Builder-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-website-builder",
+    "altText": "Website-Builder im Vergleich"
+  },
+  {
+    "id": "pin-58",
+    "platform": "Pinterest",
+    "topic": "Hosting-Anbieter",
+    "title": "Hosting-Anbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Hosting-Anbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-hosting-anbieter",
+    "altText": "Hosting-Anbieter im Vergleich"
+  },
+  {
+    "id": "pin-59",
+    "platform": "Pinterest",
+    "topic": "CRM-System",
+    "title": "CRM-System – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den CRM-System-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-crm-systeme",
+    "altText": "CRM-System im Vergleich"
+  },
+  {
+    "id": "pin-60",
+    "platform": "Pinterest",
+    "topic": "E-Mail-Marketing-Tool",
+    "title": "E-Mail-Marketing-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den E-Mail-Marketing-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-e-mail-marketing-tools",
+    "altText": "E-Mail-Marketing-Tool im Vergleich"
+  },
+  {
+    "id": "pin-61",
+    "platform": "Pinterest",
+    "topic": "Versicherung für Selbstständige",
+    "title": "Versicherung für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Versicherung für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-versicherungen-fuer-selbststaendige",
+    "altText": "Versicherung für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-62",
+    "platform": "Pinterest",
+    "topic": "Private Krankenversicherung",
+    "title": "Private Krankenversicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Private Krankenversicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/private-krankenversicherung-vergleich",
+    "altText": "Private Krankenversicherung im Vergleich"
+  },
+  {
+    "id": "pin-63",
+    "platform": "Pinterest",
+    "topic": "Kfz-Versicherung",
+    "title": "Kfz-Versicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Kfz-Versicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/kfz-versicherung-vergleich",
+    "altText": "Kfz-Versicherung im Vergleich"
+  },
+  {
+    "id": "pin-64",
+    "platform": "Pinterest",
+    "topic": "DSL/Glasfaser",
+    "title": "DSL/Glasfaser – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den DSL/Glasfaser-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/dsl-vergleich",
+    "altText": "DSL/Glasfaser im Vergleich"
+  },
+  {
+    "id": "pin-65",
+    "platform": "Pinterest",
+    "topic": "Strom & Gas",
+    "title": "Strom & Gas – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Strom & Gas-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/strom-und-gasvergleich",
+    "altText": "Strom & Gas im Vergleich"
+  },
+  {
+    "id": "pin-66",
+    "platform": "Pinterest",
+    "topic": "Scanner",
+    "title": "Scanner – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Scanner-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-scanner-fuer-selbststaendige",
+    "altText": "Scanner im Vergleich"
+  },
+  {
+    "id": "pin-67",
+    "platform": "Pinterest",
+    "topic": "Drucker",
+    "title": "Drucker – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Drucker-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-drucker-fuer-buero-und-homeoffice",
+    "altText": "Drucker im Vergleich"
+  },
+  {
+    "id": "pin-68",
+    "platform": "Pinterest",
+    "topic": "Headset",
+    "title": "Headset – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Headset-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-headsets-fuer-online-meetings",
+    "altText": "Headset im Vergleich"
+  },
+  {
+    "id": "pin-69",
+    "platform": "Pinterest",
+    "topic": "Tools für Dolmetscher",
+    "title": "Tools für Dolmetscher – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Tools für Dolmetscher-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-tools-fuer-dolmetscher-und-uebersetzer",
+    "altText": "Tools für Dolmetscher im Vergleich"
+  },
+  {
+    "id": "pin-70",
+    "platform": "Pinterest",
+    "topic": "Apps für Selbstständige",
+    "title": "Apps für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Apps für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-apps-fuer-selbststaendige",
+    "altText": "Apps für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-71",
+    "platform": "Pinterest",
+    "topic": "Projektmanagement-Tool",
+    "title": "Projektmanagement-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Projektmanagement-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-projektmanagement-tools",
+    "altText": "Projektmanagement-Tool im Vergleich"
+  },
+  {
+    "id": "pin-72",
+    "platform": "Pinterest",
+    "topic": "Terminbuchungs-Tool",
+    "title": "Terminbuchungs-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Terminbuchungs-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-terminbuchungs-tools",
+    "altText": "Terminbuchungs-Tool im Vergleich"
+  },
+  {
+    "id": "pin-73",
+    "platform": "Pinterest",
+    "topic": "Online-Zahlungsanbieter",
+    "title": "Online-Zahlungsanbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Online-Zahlungsanbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-online-zahlungsanbieter",
+    "altText": "Online-Zahlungsanbieter im Vergleich"
+  },
+  {
+    "id": "pin-74",
+    "platform": "Pinterest",
+    "topic": "KI-Tool",
+    "title": "KI-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den KI-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-ki-tools-fuer-selbststaendige",
+    "altText": "KI-Tool im Vergleich"
+  },
+  {
+    "id": "pin-75",
+    "platform": "Pinterest",
+    "topic": "Dokumentenmanagement",
+    "title": "Dokumentenmanagement – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Dokumentenmanagement-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-dokumentenmanagement-tools",
+    "altText": "Dokumentenmanagement im Vergleich"
+  },
+  {
+    "id": "pin-76",
+    "platform": "Pinterest",
+    "topic": "Geschäftskonto für Selbstständige",
+    "title": "Geschäftskonto für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Geschäftskonto für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-geschaeftskonten-fuer-selbststaendige",
+    "altText": "Geschäftskonto für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-77",
+    "platform": "Pinterest",
+    "topic": "Business-Kreditkarte",
+    "title": "Business-Kreditkarte – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Business-Kreditkarte-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-kreditkarten-fuer-selbststaendige",
+    "altText": "Business-Kreditkarte im Vergleich"
+  },
+  {
+    "id": "pin-78",
+    "platform": "Pinterest",
+    "topic": "Buchhaltungssoftware",
+    "title": "Buchhaltungssoftware – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Buchhaltungssoftware-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-buchhaltungssoftware",
+    "altText": "Buchhaltungssoftware im Vergleich"
+  },
+  {
+    "id": "pin-79",
+    "platform": "Pinterest",
+    "topic": "Rechnungsprogramm",
+    "title": "Rechnungsprogramm – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Rechnungsprogramm-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-rechnungsprogramme",
+    "altText": "Rechnungsprogramm im Vergleich"
+  },
+  {
+    "id": "pin-80",
+    "platform": "Pinterest",
+    "topic": "Steuer-Tool",
+    "title": "Steuer-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Steuer-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-steuer-tools-fuer-selbststaendige",
+    "altText": "Steuer-Tool im Vergleich"
+  },
+  {
+    "id": "pin-81",
+    "platform": "Pinterest",
+    "topic": "Shopify-Tools",
+    "title": "Shopify-Tools – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Shopify-Tools-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-shopify-tools",
+    "altText": "Shopify-Tools im Vergleich"
+  },
+  {
+    "id": "pin-82",
+    "platform": "Pinterest",
+    "topic": "Website-Builder",
+    "title": "Website-Builder – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Website-Builder-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-website-builder",
+    "altText": "Website-Builder im Vergleich"
+  },
+  {
+    "id": "pin-83",
+    "platform": "Pinterest",
+    "topic": "Hosting-Anbieter",
+    "title": "Hosting-Anbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Hosting-Anbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-hosting-anbieter",
+    "altText": "Hosting-Anbieter im Vergleich"
+  },
+  {
+    "id": "pin-84",
+    "platform": "Pinterest",
+    "topic": "CRM-System",
+    "title": "CRM-System – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den CRM-System-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-crm-systeme",
+    "altText": "CRM-System im Vergleich"
+  },
+  {
+    "id": "pin-85",
+    "platform": "Pinterest",
+    "topic": "E-Mail-Marketing-Tool",
+    "title": "E-Mail-Marketing-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den E-Mail-Marketing-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-e-mail-marketing-tools",
+    "altText": "E-Mail-Marketing-Tool im Vergleich"
+  },
+  {
+    "id": "pin-86",
+    "platform": "Pinterest",
+    "topic": "Versicherung für Selbstständige",
+    "title": "Versicherung für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Versicherung für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-versicherungen-fuer-selbststaendige",
+    "altText": "Versicherung für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-87",
+    "platform": "Pinterest",
+    "topic": "Private Krankenversicherung",
+    "title": "Private Krankenversicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Private Krankenversicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/private-krankenversicherung-vergleich",
+    "altText": "Private Krankenversicherung im Vergleich"
+  },
+  {
+    "id": "pin-88",
+    "platform": "Pinterest",
+    "topic": "Kfz-Versicherung",
+    "title": "Kfz-Versicherung – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Kfz-Versicherung-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/kfz-versicherung-vergleich",
+    "altText": "Kfz-Versicherung im Vergleich"
+  },
+  {
+    "id": "pin-89",
+    "platform": "Pinterest",
+    "topic": "DSL/Glasfaser",
+    "title": "DSL/Glasfaser – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den DSL/Glasfaser-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/dsl-vergleich",
+    "altText": "DSL/Glasfaser im Vergleich"
+  },
+  {
+    "id": "pin-90",
+    "platform": "Pinterest",
+    "topic": "Strom & Gas",
+    "title": "Strom & Gas – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Strom & Gas-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/strom-und-gasvergleich",
+    "altText": "Strom & Gas im Vergleich"
+  },
+  {
+    "id": "pin-91",
+    "platform": "Pinterest",
+    "topic": "Scanner",
+    "title": "Scanner – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Scanner-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-scanner-fuer-selbststaendige",
+    "altText": "Scanner im Vergleich"
+  },
+  {
+    "id": "pin-92",
+    "platform": "Pinterest",
+    "topic": "Drucker",
+    "title": "Drucker – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Drucker-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-drucker-fuer-buero-und-homeoffice",
+    "altText": "Drucker im Vergleich"
+  },
+  {
+    "id": "pin-93",
+    "platform": "Pinterest",
+    "topic": "Headset",
+    "title": "Headset – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Headset-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-headsets-fuer-online-meetings",
+    "altText": "Headset im Vergleich"
+  },
+  {
+    "id": "pin-94",
+    "platform": "Pinterest",
+    "topic": "Tools für Dolmetscher",
+    "title": "Tools für Dolmetscher – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Tools für Dolmetscher-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-tools-fuer-dolmetscher-und-uebersetzer",
+    "altText": "Tools für Dolmetscher im Vergleich"
+  },
+  {
+    "id": "pin-95",
+    "platform": "Pinterest",
+    "topic": "Apps für Selbstständige",
+    "title": "Apps für Selbstständige – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Apps für Selbstständige-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-apps-fuer-selbststaendige",
+    "altText": "Apps für Selbstständige im Vergleich"
+  },
+  {
+    "id": "pin-96",
+    "platform": "Pinterest",
+    "topic": "Projektmanagement-Tool",
+    "title": "Projektmanagement-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Projektmanagement-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-projektmanagement-tools",
+    "altText": "Projektmanagement-Tool im Vergleich"
+  },
+  {
+    "id": "pin-97",
+    "platform": "Pinterest",
+    "topic": "Terminbuchungs-Tool",
+    "title": "Terminbuchungs-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Terminbuchungs-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-terminbuchungs-tools",
+    "altText": "Terminbuchungs-Tool im Vergleich"
+  },
+  {
+    "id": "pin-98",
+    "platform": "Pinterest",
+    "topic": "Online-Zahlungsanbieter",
+    "title": "Online-Zahlungsanbieter – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Online-Zahlungsanbieter-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-online-zahlungsanbieter",
+    "altText": "Online-Zahlungsanbieter im Vergleich"
+  },
+  {
+    "id": "pin-99",
+    "platform": "Pinterest",
+    "topic": "KI-Tool",
+    "title": "KI-Tool – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den KI-Tool-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-ki-tools-fuer-selbststaendige",
+    "altText": "KI-Tool im Vergleich"
+  },
+  {
+    "id": "pin-100",
+    "platform": "Pinterest",
+    "topic": "Dokumentenmanagement",
+    "title": "Dokumentenmanagement – einfacher Vergleich für Selbstständige",
+    "description": "Sieh dir den Dokumentenmanagement-Vergleich an. Wichtige Kriterien, Vor- und Nachteile, alle Anbieter im direkten Überblick. Werbung / Affiliate-Link.",
+    "targetUrl": "/vergleich/beste-dokumentenmanagement-tools",
+    "altText": "Dokumentenmanagement im Vergleich"
+  }
+]
