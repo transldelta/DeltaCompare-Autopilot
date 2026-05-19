@@ -10,16 +10,33 @@ const prisma = new PrismaClient();
 async function main() {
   console.log("→ DeltaCompare Seed startet");
 
-  const adminEmail = process.env.ADMIN_EMAIL || "admin@deltacompare.local";
+  const rawEmail = process.env.ADMIN_EMAIL || "admin@deltacompare.local";
+  const adminEmail = rawEmail.trim().toLowerCase();
   const adminPassword = process.env.ADMIN_PASSWORD || "change-me";
   const passwordHash = await bcrypt.hash(adminPassword, 10);
 
-  await prisma.user.upsert({
+  // Defensive Bereinigung: alte Admin-Datensätze mit abweichender Schreibweise
+  // entfernen (z. B. wenn ADMIN_EMAIL früher mit Großbuchstaben gesetzt war).
+  // Das Login normalisiert die E-Mail auf Kleinschreibung – also muss der
+  // gespeicherte Wert ebenfalls kleingeschrieben sein, damit findUnique trifft.
+  const existingUsers = await prisma.user.findMany();
+  for (const u of existingUsers) {
+    if (u.email.toLowerCase() === adminEmail && u.email !== adminEmail) {
+      console.log(`⚠ Stale Admin-Datensatz entfernt: ${u.email} (wird durch ${adminEmail} ersetzt)`);
+      await prisma.user.delete({ where: { id: u.id } });
+    }
+  }
+
+  const upserted = await prisma.user.upsert({
     where: { email: adminEmail },
     update: { passwordHash, role: "admin" },
     create: { email: adminEmail, passwordHash, role: "admin" },
   });
-  console.log(`✓ Admin-User: ${adminEmail}`);
+
+  console.log(`✓ Admin-User gespeichert: ${upserted.email}`);
+  console.log(`  Passwort wurde frisch mit bcrypt gehasht.`);
+  console.log(`  ADMIN_EMAIL aus ENV:    ${process.env.ADMIN_EMAIL ? "✓ gesetzt" : "○ leer → Fallback verwendet"}`);
+  console.log(`  ADMIN_PASSWORD aus ENV: ${process.env.ADMIN_PASSWORD ? "✓ gesetzt" : "○ leer → 'change-me' verwendet"}`);
 
   for (const cat of CATEGORIES) {
     await prisma.category.upsert({

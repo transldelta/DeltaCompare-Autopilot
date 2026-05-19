@@ -66,11 +66,15 @@ export async function checkCredentials(email: string, password: string): Promise
 
   try {
     const user = await prisma.user.findUnique({ where: { email: cleanEmail } });
-    if (user) {
-      return bcrypt.compare(password, user.passwordHash);
+    if (!user) {
+      console.warn(`[auth] Login fehlgeschlagen: kein User mit email='${cleanEmail}' (Tipp: 'npm run db:seed' ausführen oder ADMIN_EMAIL prüfen)`);
+    } else {
+      const ok = await bcrypt.compare(password, user.passwordHash);
+      if (!ok) console.warn(`[auth] Login fehlgeschlagen: falsches Passwort für '${cleanEmail}'`);
+      return ok;
     }
-  } catch {
-    // DB nicht erreichbar – Dev-Fallback erlauben
+  } catch (err) {
+    console.error("[auth] DB-Fehler im Login-Check:", err);
   }
 
   if (process.env.NODE_ENV !== "production") {
