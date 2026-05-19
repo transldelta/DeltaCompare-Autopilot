@@ -19,6 +19,7 @@ const NAV = [
   { href: "/admin/revenue-calculator", label: "Einnahmen-Rechner" },
   { href: "/admin/autopilot", label: "Autopilot" },
   { href: "/admin/audit", label: "Pre-Launch Audit" },
+  { href: "/admin/launch-wizard", label: "Launch-Assistent" },
   { href: "/admin/settings", label: "Einstellungen" },
 ];
 
