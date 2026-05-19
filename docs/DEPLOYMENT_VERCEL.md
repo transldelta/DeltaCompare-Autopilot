@@ -12,12 +12,14 @@ Schritt-für-Schritt-Anleitung. Geeignet für Selbstständige, die nicht program
 ## 1. Repository nach Vercel importieren
 
 1. Auf <https://vercel.com> einloggen.
-2. „New Project“ klicken.
-3. GitHub-Repo `transldelta/XAU-USD` (oder das umbenannte `transldelta/DeltaCompare`, siehe
-   [REPOSITORY_MIGRATION.md](./REPOSITORY_MIGRATION.md)) auswählen.
+2. „New Project" klicken.
+3. GitHub-Repo `transldelta/deltacompare-autopilot` auswählen.
 4. **Framework Preset**: Next.js (wird automatisch erkannt).
 5. **Root Directory**: leer lassen.
-6. **Build Command**: `npm run build` (Standard).
+6. **Build Command**: Vercel nutzt automatisch `npm run vercel-build`
+   (führt aus: `prisma generate && prisma db push && tsx prisma/seed.ts && next build`).
+   Falls Vercel das nicht automatisch erkennt, manuell setzen auf:
+   `npx prisma generate && npx prisma db push --accept-data-loss --skip-generate && npx tsx prisma/seed.ts && npx next build`
 7. **Output Directory**: `.next` (Standard).
 8. **Install Command**: `npm install` (Standard).
 

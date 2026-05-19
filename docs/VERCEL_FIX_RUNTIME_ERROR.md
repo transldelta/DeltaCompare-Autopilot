@@ -1,3 +1,33 @@
+# Vercel + PostgreSQL einrichten (Runtime-Error beheben)
+
+Diese Anleitung führt durch die Vollumstellung von SQLite auf PostgreSQL für
+deinen Vercel-Deploy. Nach diesen Schritten verschwindet die Meldung
+„Application error: a server-side exception" — und du nutzt die produktionsfertige
+Postgres-Konfiguration.
+
+## Build Command in Vercel
+
+Im Vercel-Projekt unter **Settings → General → Build & Development Settings**:
+
+| Feld | Wert |
+| --- | --- |
+| **Build Command** | `npm run vercel-build` (oder explizit: `npx prisma generate && npx prisma db push --accept-data-loss --skip-generate && npx tsx prisma/seed.ts && npx next build`) |
+| **Output Directory** | `.next` (Standard) |
+| **Install Command** | `npm install` (Standard) |
+
+Das `vercel-build`-Skript ist bereits in `package.json` definiert. Vercel
+verwendet es automatisch, wenn vorhanden — du musst den Build Command nicht
+manuell überschreiben, außer du willst die Schritte explizit sehen.
+
+Was `vercel-build` macht:
+
+1. `prisma generate` — Client gegen das Postgres-Schema erzeugen
+2. `prisma db push --accept-data-loss --skip-generate` — Tabellen anlegen (idempotent)
+3. `tsx prisma/seed.ts` — Demo-Daten + bcrypt-Admin-User (upsert, idempotent)
+4. `next build` — Next.js-Build
+
+---
+
 # Vercel-Runtime-Error beheben („Application error: a server-side exception")
 
 Wenn deine Vercel-Webseite mit folgender Meldung erscheint:
