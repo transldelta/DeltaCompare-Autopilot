@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -13,11 +14,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function ComparisonIndexPage() {
-  const comparisons = await prisma.comparisonPage.findMany({
+  const comparisons = await safe(() => prisma.comparisonPage.findMany({
     where: { status: "active" },
     include: { category: true },
     orderBy: { createdAt: "asc" },
-  });
+  }), [], "comparisons.list");
 
   return (
     <>

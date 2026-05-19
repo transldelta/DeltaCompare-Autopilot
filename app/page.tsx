@@ -5,28 +5,31 @@ import OfferCard from "@/components/OfferCard";
 import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import { AFFILIATE_DISCLOSURE_TEXT } from "@/lib/affiliate";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const [categories, featuredOffers, topComparisons] = await Promise.all([
-    prisma.category.findMany({
+    safe(() => prisma.category.findMany({
       where: { status: "active" },
       include: { _count: { select: { offers: true } } },
       orderBy: { name: "asc" },
-    }),
-    prisma.offer.findMany({
+    }), [], "home.categories"),
+    safe(() => prisma.offer.findMany({
       where: { status: "active", isFeatured: true },
       take: 6,
       orderBy: { rating: "desc" },
-    }),
-    prisma.comparisonPage.findMany({
+    }), [], "home.featured"),
+    safe(() => prisma.comparisonPage.findMany({
       where: { status: "active" },
       take: 6,
       orderBy: { createdAt: "desc" },
-    }),
+    }), [], "home.comparisons"),
   ]);
+
+  const dbEmpty = categories.length === 0 && featuredOffers.length === 0 && topComparisons.length === 0;
 
   const faq = [
     { q: "Was ist DeltaCompare?", a: "DeltaCompare ist ein unabhängiges Vergleichsportal für Tools, Konten, Versicherungen und Services für Selbstständige." },
@@ -38,6 +41,16 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+
+      {dbEmpty && (
+        <section className="container-page mt-6">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+            <strong>Hinweis:</strong> Die Inhalte konnten gerade nicht geladen werden. Falls du das System gerade
+            aufsetzt, prüfe bitte die Umgebungsvariable <code>DATABASE_URL</code> und führe <code>npx prisma db push</code>
+            sowie <code>npm run db:seed</code> aus. Details im <code>docs/DEPLOYMENT_VERCEL.md</code>.
+          </div>
+        </section>
+      )}
 
       <section className="container-page py-16">
         <div className="flex items-end justify-between">

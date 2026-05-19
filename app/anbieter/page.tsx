@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import OfferCard from "@/components/OfferCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -13,11 +14,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function OfferIndexPage() {
-  const offers = await prisma.offer.findMany({
+  const offers = await safe(() => prisma.offer.findMany({
     where: { status: "active" },
     orderBy: [{ isFeatured: "desc" }, { rating: "desc" }],
     include: { category: true },
-  });
+  }), [], "offers.list");
 
   return (
     <>

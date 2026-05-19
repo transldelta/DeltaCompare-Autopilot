@@ -1,20 +1,17 @@
-// DeltaCompare Autopilot - Prisma Schema
-// Provider: PostgreSQL (produktionsfertig).
+// SQLite-Variante des Prisma-Schemas (für lokale Entwicklung).
+// Für Produktion: cp prisma/schema.prisma (Postgres) verwenden.
 //
-// Lokale Entwicklung mit SQLite:
-//   1. provider unten temporär auf "sqlite" stellen
-//   2. DATABASE_URL="file:./dev.db" in .env
-//   3. npx prisma generate && npx prisma db push
-//
-// Auf Vercel/Production muss DATABASE_URL eine echte Postgres-URL sein,
-// z. B. ${POSTGRES_PRISMA_URL} bei Vercel Postgres.
+// Lokale Nutzung:
+//   cp prisma/schema.sqlite.prisma prisma/schema.prisma
+//   DATABASE_URL="file:./dev.db" in .env
+//   npx prisma generate && npx prisma db push && npm run db:seed
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -41,28 +38,28 @@ model Category {
 }
 
 model Offer {
-  id                  String   @id @default(cuid())
+  id                  String       @id @default(cuid())
   name                String
-  slug                String   @unique
+  slug                String       @unique
   categoryId          String
-  category            Category @relation(fields: [categoryId], references: [id])
+  category            Category     @relation(fields: [categoryId], references: [id])
   network             String
   affiliateLink       String
-  trackingId          String   @default("")
-  commissionType      String   @default("Sale")
-  estimatedCommission String   @default("")
+  trackingId          String       @default("")
+  commissionType      String       @default("Sale")
+  estimatedCommission String       @default("")
   shortDescription    String
   longDescription     String
-  advantages          String   @default("")
-  disadvantages       String   @default("")
-  priceNote           String   @default("")
-  rating              Float    @default(4.0)
-  logoUrl             String   @default("")
-  buttonText          String   @default("Zum Anbieter")
-  status              String   @default("active")
-  isFeatured          Boolean  @default(false)
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+  advantages          String       @default("")
+  disadvantages       String       @default("")
+  priceNote           String       @default("")
+  rating              Float        @default(4.0)
+  logoUrl             String       @default("")
+  buttonText          String       @default("Zum Anbieter")
+  status              String       @default("active")
+  isFeatured          Boolean      @default(false)
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
   clicks              ClickEvent[]
 }
 
@@ -146,12 +143,9 @@ model Settings {
   updatedAt DateTime @updatedAt
 }
 
-// === Monetarisierung ===
-
 model AdNetwork {
   id          String        @id @default(cuid())
   name        String
-  // ADSENSE | AWIN | FINANCEADS | DIRECT | OTHER
   type        String        @default("OTHER")
   status      String        @default("active")
   publisherId String        @default("")
@@ -165,9 +159,7 @@ model AdPlacement {
   id            String         @id @default(cuid())
   name          String
   slug          String         @unique
-  // HEADER | SIDEBAR | IN_CONTENT | FOOTER | COMPARISON_TABLE | MOBILE_STICKY
   placementType String         @default("IN_CONTENT")
-  // DISPLAY | TEXT_LINK | BANNER | NATIVE | CPC_LINK
   adType        String         @default("DISPLAY")
   networkId     String?
   network       AdNetwork?     @relation(fields: [networkId], references: [id])

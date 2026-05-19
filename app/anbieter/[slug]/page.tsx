@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AffiliateButton from "@/components/AffiliateButton";
@@ -11,7 +12,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const offer = await prisma.offer.findUnique({ where: { slug: params.slug } });
+  const offer = await safe(() => prisma.offer.findUnique({ where: { slug: params.slug } }), null, "offer.meta");
   if (!offer) return buildMetadata({ title: "Anbieter nicht gefunden", path: `/anbieter/${params.slug}`, noIndex: true });
   return buildMetadata({
     title: offer.name,
@@ -21,7 +22,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function OfferPage({ params }: { params: { slug: string } }) {
-  const offer = await prisma.offer.findUnique({ where: { slug: params.slug }, include: { category: true } });
+  const offer = await safe(
+    () => prisma.offer.findUnique({ where: { slug: params.slug }, include: { category: true } }),
+    null,
+    "offer.page",
+  );
   if (!offer) return notFound();
 
   const advantages = (offer.advantages || "").split("|").filter(Boolean);

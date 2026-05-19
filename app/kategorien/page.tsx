@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import CategoryCard from "@/components/CategoryCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -13,11 +14,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function CategoriesPage() {
-  const categories = await prisma.category.findMany({
+  const categories = await safe(() => prisma.category.findMany({
     where: { status: "active" },
     include: { _count: { select: { offers: true } } },
     orderBy: { name: "asc" },
-  });
+  }), [], "categories.list");
 
   return (
     <>

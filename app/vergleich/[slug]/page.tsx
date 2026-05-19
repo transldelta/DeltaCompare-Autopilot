@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -14,7 +15,7 @@ import type { Metadata } from "next";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const cmp = await prisma.comparisonPage.findUnique({ where: { slug: params.slug } });
+  const cmp = await safe(() => prisma.comparisonPage.findUnique({ where: { slug: params.slug } }), null, "comparison.meta");
   if (!cmp) return buildMetadata({ title: "Vergleich nicht gefunden", path: `/vergleich/${params.slug}`, noIndex: true });
   return buildMetadata({
     title: cmp.seoTitle || cmp.title,
@@ -24,15 +25,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function ComparisonPage({ params }: { params: { slug: string } }) {
-  const cmp = await prisma.comparisonPage.findUnique({
-    where: { slug: params.slug },
-    include: { category: true },
-  });
+  const cmp = await safe(
+    () => prisma.comparisonPage.findUnique({ where: { slug: params.slug }, include: { category: true } }),
+    null,
+    "comparison.page",
+  );
   if (!cmp) return notFound();
 
   const offerSlugs = (cmp.offerSlugs || "").split(",").map((s) => s.trim()).filter(Boolean);
   const offers = offerSlugs.length
-    ? await prisma.offer.findMany({ where: { slug: { in: offerSlugs }, status: "active" } })
+    ? await safe(
+        () => prisma.offer.findMany({ where: { slug: { in: offerSlugs }, status: "active" } }),
+        [],
+        "comparison.offers",
+      )
     : [];
 
   // Reihenfolge nach offerSlugs-Liste

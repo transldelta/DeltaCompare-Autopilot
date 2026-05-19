@@ -1,14 +1,31 @@
 # DeltaCompare Autopilot
 
-Vollständiges Affiliate- und Vergleichsportal für Selbstständige – Next.js 14, TypeScript, Tailwind, Prisma (SQLite lokal, PostgreSQL in Produktion).
+Vollständiges Affiliate- und Vergleichsportal für Selbstständige – Next.js 14, TypeScript, Tailwind, Prisma.
 
-## Schnellstart (lokal)
+> **Standardmäßig nutzt `prisma/schema.prisma` PostgreSQL** (produktionsfertig).
+> Für lokale Entwicklung mit SQLite: `cp prisma/schema.sqlite.prisma prisma/schema.prisma` ausführen.
+
+## Schnellstart (lokal mit SQLite)
 
 ```bash
 npm install
-cp .env.example .env             # mindestens ADMIN_PASSWORD und AUTH_SECRET anpassen
-npm run db:push                  # Schema in SQLite-DB pushen
-npm run db:seed                  # Demo-Daten + bcrypt-Admin-User anlegen
+cp prisma/schema.sqlite.prisma prisma/schema.prisma   # ← wichtig für SQLite-Dev
+cp .env.example .env                                   # ADMIN_PASSWORD + AUTH_SECRET anpassen
+# DATABASE_URL="file:./dev.db" in .env eintragen
+npx prisma generate
+npm run db:push                                        # Schema in SQLite-DB pushen
+npm run db:seed                                        # Demo-Daten + bcrypt-Admin-User anlegen
+npm run dev
+```
+
+## Schnellstart (lokal mit PostgreSQL)
+
+```bash
+npm install
+cp .env.example .env                                   # DATABASE_URL auf Postgres setzen
+npx prisma generate
+npm run db:push
+npm run db:seed
 npm run dev
 ```
 

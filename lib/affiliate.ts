@@ -2,11 +2,18 @@ import { prisma } from "./prisma";
 import { isDemoLink } from "./utils";
 
 export async function resolveOfferForRedirect(slug: string) {
-  const offer = await prisma.offer.findUnique({ where: { slug } });
-  if (!offer) return { found: false as const };
-  if (offer.status !== "active") return { found: true as const, blocked: true as const, reason: "inactive" as const, offer };
-  if (isDemoLink(offer.affiliateLink)) return { found: true as const, blocked: true as const, reason: "demo" as const, offer };
-  return { found: true as const, blocked: false as const, offer };
+  try {
+    const offer = await prisma.offer.findUnique({ where: { slug } });
+    if (!offer) return { found: false as const };
+    if (offer.status !== "active")
+      return { found: true as const, blocked: true as const, reason: "inactive" as const, offer };
+    if (isDemoLink(offer.affiliateLink))
+      return { found: true as const, blocked: true as const, reason: "demo" as const, offer };
+    return { found: true as const, blocked: false as const, offer };
+  } catch (err) {
+    console.error("[resolveOfferForRedirect] DB-Fehler:", err);
+    return { found: false as const };
+  }
 }
 
 export function appendTrackingId(url: string, trackingId?: string | null): string {

@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { safe } from "@/lib/safe";
 import { notFound } from "next/navigation";
 import OfferCard from "@/components/OfferCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -9,7 +10,7 @@ import type { Metadata } from "next";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const cat = await prisma.category.findUnique({ where: { slug: params.slug } });
+  const cat = await safe(() => prisma.category.findUnique({ where: { slug: params.slug } }), null, "category.meta");
   if (!cat) return buildMetadata({ title: "Kategorie nicht gefunden", path: `/kategorien/${params.slug}`, noIndex: true });
   return buildMetadata({
     title: cat.name,
@@ -19,12 +20,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
-  const cat = await prisma.category.findUnique({ where: { slug: params.slug } });
+  const cat = await safe(() => prisma.category.findUnique({ where: { slug: params.slug } }), null, "category.page");
   if (!cat) return notFound();
 
   const [offers, comparisons] = await Promise.all([
-    prisma.offer.findMany({ where: { categoryId: cat.id, status: "active" }, orderBy: [{ isFeatured: "desc" }, { rating: "desc" }] }),
-    prisma.comparisonPage.findMany({ where: { categoryId: cat.id, status: "active" }, orderBy: { createdAt: "desc" } }),
+    safe(() => prisma.offer.findMany({ where: { categoryId: cat.id, status: "active" }, orderBy: [{ isFeatured: "desc" }, { rating: "desc" }] }), [], "category.offers"),
+    safe(() => prisma.comparisonPage.findMany({ where: { categoryId: cat.id, status: "active" }, orderBy: { createdAt: "desc" } }), [], "category.comparisons"),
   ]);
 
   return (

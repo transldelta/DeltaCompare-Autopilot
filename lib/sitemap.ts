@@ -1,4 +1,5 @@
 import { prisma } from "./prisma";
+import { safe } from "./safe";
 import { getSiteUrl } from "./utils";
 
 export async function getAllSitemapEntries() {
@@ -17,9 +18,9 @@ export async function getAllSitemapEntries() {
   ];
 
   const [cats, offers, comparisons] = await Promise.all([
-    prisma.category.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }),
-    prisma.offer.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }),
-    prisma.comparisonPage.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }),
+    safe(() => prisma.category.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }), [], "sitemap.cats"),
+    safe(() => prisma.offer.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }), [], "sitemap.offers"),
+    safe(() => prisma.comparisonPage.findMany({ where: { status: "active" }, select: { slug: true, updatedAt: true } }), [], "sitemap.comparisons"),
   ]);
 
   const now = new Date();
