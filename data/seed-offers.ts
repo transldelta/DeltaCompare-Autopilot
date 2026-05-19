@@ -26,7 +26,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Geschäftskonto Anbieter A",
     slug: "geschaeftskonto-anbieter-a",
-    categorySlug: "geschaeftskonten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     network: "Awin",
     affiliateLink: demo("geschaeftskonto-anbieter-a"),
     trackingId: "",
@@ -50,7 +50,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Geschäftskonto Anbieter B",
     slug: "geschaeftskonto-anbieter-b",
-    categorySlug: "geschaeftskonten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     network: "financeAds",
     affiliateLink: demo("geschaeftskonto-anbieter-b"),
     trackingId: "",
@@ -73,7 +73,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Geschäftskonto Anbieter C",
     slug: "geschaeftskonto-anbieter-c",
-    categorySlug: "geschaeftskonten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     network: "Awin",
     affiliateLink: demo("geschaeftskonto-anbieter-c"),
     trackingId: "",
@@ -98,7 +98,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Kreditkarte Anbieter A",
     slug: "kreditkarte-anbieter-a",
-    categorySlug: "kreditkarten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     network: "Awin",
     affiliateLink: demo("kreditkarte-anbieter-a"),
     trackingId: "",
@@ -121,7 +121,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Kreditkarte Anbieter B",
     slug: "kreditkarte-anbieter-b",
-    categorySlug: "kreditkarten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     network: "financeAds",
     affiliateLink: demo("kreditkarte-anbieter-b"),
     trackingId: "",
@@ -145,7 +145,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Geschäftskredit Anbieter A",
     slug: "geschaeftskredit-anbieter-a",
-    categorySlug: "kredite",
+    categorySlug: "finanzierung-kredite",
     network: "financeAds",
     affiliateLink: demo("geschaeftskredit-anbieter-a"),
     trackingId: "",
@@ -237,7 +237,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Buchhaltungssoftware A",
     slug: "buchhaltungssoftware-a",
-    categorySlug: "buchhaltungssoftware",
+    categorySlug: "buchhaltung-steuern",
     network: "PartnerStack",
     affiliateLink: demo("buchhaltungssoftware-a"),
     trackingId: "",
@@ -259,7 +259,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Buchhaltungssoftware B",
     slug: "buchhaltungssoftware-b",
-    categorySlug: "buchhaltungssoftware",
+    categorySlug: "buchhaltung-steuern",
     network: "PartnerStack",
     affiliateLink: demo("buchhaltungssoftware-b"),
     trackingId: "",
@@ -283,7 +283,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Steuer-Tool A",
     slug: "steuer-tool-a",
-    categorySlug: "steuer-tools",
+    categorySlug: "buchhaltung-steuern",
     network: "Awin",
     affiliateLink: demo("steuer-tool-a"),
     trackingId: "",
@@ -307,7 +307,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Shopify-Tool A",
     slug: "shopify-tool-a",
-    categorySlug: "shopify-tools",
+    categorySlug: "shopify-e-commerce",
     network: "Shopify",
     affiliateLink: demo("shopify-tool-a"),
     trackingId: "",
@@ -329,7 +329,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Shopify",
     slug: "shopify",
-    categorySlug: "shopify-tools",
+    categorySlug: "shopify-e-commerce",
     network: "Shopify",
     affiliateLink: demo("shopify"),
     trackingId: "",
@@ -353,7 +353,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Website-Builder A",
     slug: "website-builder-a",
-    categorySlug: "website-builder",
+    categorySlug: "website-hosting-domains",
     network: "Awin",
     affiliateLink: demo("website-builder-a"),
     trackingId: "",
@@ -377,7 +377,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Hosting Anbieter A",
     slug: "hosting-anbieter-a",
-    categorySlug: "hosting-und-domains",
+    categorySlug: "website-hosting-domains",
     network: "Awin",
     affiliateLink: demo("hosting-anbieter-a"),
     trackingId: "",
@@ -401,7 +401,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "CRM Tool A",
     slug: "crm-tool-a",
-    categorySlug: "crm-systeme",
+    categorySlug: "business-tools",
     network: "HubSpot",
     affiliateLink: demo("crm-tool-a"),
     trackingId: "",
@@ -425,7 +425,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "E-Mail-Marketing Tool A",
     slug: "e-mail-marketing-tool-a",
-    categorySlug: "e-mail-marketing",
+    categorySlug: "marketing-kundengewinnung",
     network: "PartnerStack",
     affiliateLink: demo("e-mail-marketing-tool-a"),
     trackingId: "",
@@ -449,7 +449,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Scanner Anbieter A",
     slug: "scanner-anbieter-a",
-    categorySlug: "homeoffice-und-buero",
+    categorySlug: "homeoffice-buero",
     network: "Awin",
     affiliateLink: demo("scanner-anbieter-a"),
     trackingId: "",
@@ -471,7 +471,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Headset Anbieter A",
     slug: "headset-anbieter-a",
-    categorySlug: "homeoffice-und-buero",
+    categorySlug: "homeoffice-buero",
     network: "Awin",
     affiliateLink: demo("headset-anbieter-a"),
     trackingId: "",
@@ -495,7 +495,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Projektmanagement-Tool A",
     slug: "projektmanagement-tool-a",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     network: "PartnerStack",
     affiliateLink: demo("projektmanagement-tool-a"),
     trackingId: "",
@@ -517,7 +517,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Terminbuchungs-Tool A",
     slug: "terminbuchungs-tool-a",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     network: "PartnerStack",
     affiliateLink: demo("terminbuchungs-tool-a"),
     trackingId: "",
@@ -539,7 +539,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Zahlungsanbieter A",
     slug: "zahlungsanbieter-a",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     network: "Direkt",
     affiliateLink: demo("zahlungsanbieter-a"),
     trackingId: "",
@@ -561,7 +561,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "KI-Tool A für Selbstständige",
     slug: "ki-tool-a",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     network: "PartnerStack",
     affiliateLink: demo("ki-tool-a"),
     trackingId: "",
@@ -583,7 +583,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Dokumentenmanagement A",
     slug: "dokumentenmanagement-a",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     network: "PartnerStack",
     affiliateLink: demo("dokumentenmanagement-a"),
     trackingId: "",
@@ -607,7 +607,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "CAT-Tool Anbieter A",
     slug: "cat-tool-anbieter-a",
-    categorySlug: "tools-fuer-dolmetscher-und-uebersetzer",
+    categorySlug: "dolmetscher-uebersetzer-tools",
     network: "Direkt",
     affiliateLink: demo("cat-tool-anbieter-a"),
     trackingId: "",
@@ -629,7 +629,7 @@ export const OFFERS: SeedOffer[] = [
   {
     name: "Dolmetscher-Plattform A",
     slug: "dolmetscher-plattform-a",
-    categorySlug: "tools-fuer-dolmetscher-und-uebersetzer",
+    categorySlug: "dolmetscher-uebersetzer-tools",
     network: "Direkt",
     affiliateLink: demo("dolmetscher-plattform-a"),
     trackingId: "",

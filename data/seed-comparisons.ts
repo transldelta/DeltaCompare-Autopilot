@@ -1,3 +1,5 @@
+import { HAUPTBEREICHE } from "./hauptbereiche";
+
 type FaqItem = { q: string; a: string };
 
 type SeedComparison = {
@@ -12,11 +14,11 @@ type SeedComparison = {
   offerSlugs: string;
 };
 
-export const COMPARISONS: SeedComparison[] = [
+const HANDWRITTEN_COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Geschäftskonten für Selbstständige",
     slug: "beste-geschaeftskonten-fuer-selbststaendige",
-    categorySlug: "geschaeftskonten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     seoTitle: "Beste Geschäftskonten für Selbstständige im Vergleich",
     metaDescription:
       "Vergleiche Geschäftskonten für Selbstständige und Freelancer: Kontoführungsgebühren, Karten, Buchhaltungs-Anbindung und Online-Eröffnung.",
@@ -47,7 +49,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Kreditkarten für Selbstständige",
     slug: "beste-kreditkarten-fuer-selbststaendige",
-    categorySlug: "kreditkarten",
+    categorySlug: "geschaeftskonto-kreditkarten",
     seoTitle: "Beste Kreditkarten für Selbstständige im Vergleich",
     metaDescription:
       "Business-Kreditkarten mit Spesenmanagement, Bonus­programmen und Versicherungen – passend für Selbstständige und Freelancer.",
@@ -65,7 +67,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Buchhaltungssoftware",
     slug: "beste-buchhaltungssoftware",
-    categorySlug: "buchhaltungssoftware",
+    categorySlug: "buchhaltung-steuern",
     seoTitle: "Beste Buchhaltungssoftware für Selbstständige 2026",
     metaDescription:
       "Online-Buchhaltung im Vergleich: ELSTER-Anbindung, Belegerfassung, Rechnungen und Steuerberater-Schnittstelle.",
@@ -83,7 +85,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Rechnungsprogramme",
     slug: "beste-rechnungsprogramme",
-    categorySlug: "buchhaltungssoftware",
+    categorySlug: "buchhaltung-steuern",
     seoTitle: "Beste Rechnungsprogramme für Selbstständige",
     metaDescription:
       "Rechnungs­programme im Vergleich: Vorlagen, Kunden­verwaltung, Mahnwesen, EÜR-Vorbereitung und mobile App.",
@@ -101,7 +103,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Steuer-Tools für Selbstständige",
     slug: "beste-steuer-tools-fuer-selbststaendige",
-    categorySlug: "steuer-tools",
+    categorySlug: "buchhaltung-steuern",
     seoTitle: "Beste Steuer-Tools für Selbstständige im Vergleich",
     metaDescription:
       "Steuer-Software für Selbstständige: ELSTER-Anbindung, Schritt-für-Schritt-Anleitung und Tipps zum Steuern sparen.",
@@ -119,7 +121,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Shopify-Tools",
     slug: "beste-shopify-tools",
-    categorySlug: "shopify-tools",
+    categorySlug: "shopify-e-commerce",
     seoTitle: "Beste Shopify-Apps und Tools im Vergleich",
     metaDescription:
       "Shopify-Apps für Conversion, Marketing und Logistik – Tools, die deinen Onlineshop messbar verbessern.",
@@ -136,7 +138,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Website-Builder",
     slug: "beste-website-builder",
-    categorySlug: "website-builder",
+    categorySlug: "website-hosting-domains",
     seoTitle: "Beste Website-Builder im Vergleich",
     metaDescription:
       "Homepage-Baukästen im Vergleich – Templates, SEO, Domains und Preise für Selbstständige.",
@@ -153,7 +155,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Hosting-Anbieter",
     slug: "beste-hosting-anbieter",
-    categorySlug: "hosting-und-domains",
+    categorySlug: "website-hosting-domains",
     seoTitle: "Beste Hosting-Anbieter im Vergleich",
     metaDescription:
       "Webhosting im Vergleich – SSD-Speicher, WordPress-Installation, kostenlose SSL und Support.",
@@ -170,7 +172,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste CRM-Systeme",
     slug: "beste-crm-systeme",
-    categorySlug: "crm-systeme",
+    categorySlug: "business-tools",
     seoTitle: "Beste CRM-Systeme im Vergleich",
     metaDescription:
       "CRM-Software im Vergleich – Kontakte, Pipeline, Marketing-Automation und Reporting für Selbstständige und KMU.",
@@ -187,7 +189,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste E-Mail-Marketing-Tools",
     slug: "beste-e-mail-marketing-tools",
-    categorySlug: "e-mail-marketing",
+    categorySlug: "marketing-kundengewinnung",
     seoTitle: "Beste E-Mail-Marketing-Tools im Vergleich",
     metaDescription:
       "Newsletter-Tools im Vergleich – DSGVO, DOI, Automatisierungen und Anmelde­formulare für Selbstständige.",
@@ -255,7 +257,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "DSL-Vergleich",
     slug: "dsl-vergleich",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "energie-internet-telekom",
     seoTitle: "DSL- und Glasfaser-Vergleich für Homeoffice",
     metaDescription:
       "DSL- und Glasfaser-Anbieter im Vergleich für Selbstständige und Homeoffice – Geschwindigkeit, Vertragslaufzeit und Preis.",
@@ -272,7 +274,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Strom- und Gasvergleich",
     slug: "strom-und-gasvergleich",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "energie-internet-telekom",
     seoTitle: "Strom- und Gasvergleich für Privat und Gewerbe",
     metaDescription:
       "Strom- und Gasanbieter vergleichen – Tarife, Bonus­zahlungen und Wechselservice.",
@@ -289,7 +291,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Scanner für Selbstständige",
     slug: "beste-scanner-fuer-selbststaendige",
-    categorySlug: "homeoffice-und-buero",
+    categorySlug: "homeoffice-buero",
     seoTitle: "Beste Dokumentenscanner für Selbstständige",
     metaDescription:
       "Scanner für GoBD-konforme Belegarchivierung – Geschwindigkeit, Doppelseiten-Scan, OCR und Software.",
@@ -306,7 +308,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Drucker für Büro und Homeoffice",
     slug: "beste-drucker-fuer-buero-und-homeoffice",
-    categorySlug: "homeoffice-und-buero",
+    categorySlug: "homeoffice-buero",
     seoTitle: "Beste Drucker für Büro und Homeoffice",
     metaDescription:
       "Drucker im Vergleich – Laser oder Tinte, Multifunktion, Folgekosten und WLAN-Anbindung.",
@@ -323,7 +325,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Headsets für Online-Meetings",
     slug: "beste-headsets-fuer-online-meetings",
-    categorySlug: "homeoffice-und-buero",
+    categorySlug: "homeoffice-buero",
     seoTitle: "Beste Headsets für Online-Meetings und Calls",
     metaDescription:
       "Headsets für Videocalls, Dolmetscher und Homeoffice – Sprach­qualität, Akku, ANC und Kompatibilität.",
@@ -340,7 +342,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Tools für Dolmetscher und Übersetzer",
     slug: "beste-tools-fuer-dolmetscher-und-uebersetzer",
-    categorySlug: "tools-fuer-dolmetscher-und-uebersetzer",
+    categorySlug: "dolmetscher-uebersetzer-tools",
     seoTitle: "Beste Tools für Dolmetscher und Übersetzer",
     metaDescription:
       "CAT-Tools, Plattformen und Hardware für Dolmetscher und Übersetzer im Vergleich.",
@@ -357,7 +359,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Apps für Selbstständige",
     slug: "beste-apps-fuer-selbststaendige",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "produktivitaet-organisation",
     seoTitle: "Beste Apps für Selbstständige – Produktivität und Business",
     metaDescription:
       "Die besten Apps für Selbstständige – Buchhaltung, Notizen, Zeit­erfassung, Cloud-Speicher und mehr.",
@@ -374,7 +376,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Projektmanagement-Tools",
     slug: "beste-projektmanagement-tools",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     seoTitle: "Beste Projektmanagement-Tools im Vergleich",
     metaDescription:
       "PM-Tools im Vergleich – Kanban, Aufgaben, Automationen und Team­funktionen für Selbstständige und Teams.",
@@ -391,7 +393,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Terminbuchungs-Tools",
     slug: "beste-terminbuchungs-tools",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     seoTitle: "Beste Terminbuchungs-Tools im Vergleich",
     metaDescription:
       "Online-Termin­buchung im Vergleich – Kalender-Integration, Zahlungen und Erinnerungen.",
@@ -408,7 +410,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Online-Zahlungsanbieter",
     slug: "beste-online-zahlungsanbieter",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "shopify-e-commerce",
     seoTitle: "Beste Online-Zahlungsanbieter im Vergleich",
     metaDescription:
       "Zahlungs­anbieter im Vergleich – Karten­zahlung, SEPA, Rechnungs-Links und Gebühren.",
@@ -425,7 +427,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste KI-Tools für Selbstständige",
     slug: "beste-ki-tools-fuer-selbststaendige",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     seoTitle: "Beste KI-Tools für Selbstständige",
     metaDescription:
       "KI-Tools für Selbstständige im Vergleich – Texte, Bilder, Recherche und Automatisierungen.",
@@ -442,7 +444,7 @@ export const COMPARISONS: SeedComparison[] = [
   {
     title: "Beste Dokumentenmanagement-Tools",
     slug: "beste-dokumentenmanagement-tools",
-    categorySlug: "tools-fuer-selbststaendige",
+    categorySlug: "business-tools",
     seoTitle: "Beste Dokumentenmanagement-Tools (DMS) im Vergleich",
     metaDescription:
       "DMS für Selbstständige – GoBD, OCR, Volltextsuche, Versionierung und Cloud-Backup.",
@@ -457,3 +459,83 @@ export const COMPARISONS: SeedComparison[] = [
     offerSlugs: "dokumentenmanagement-a",
   },
 ];
+
+/**
+ * Generator: erzeugt eine Vergleichsseite aus einem Hauptbereich + Unter-Thema.
+ *
+ * Wir produzieren echten deutschen Inhalt mit themen-spezifischen Bullet Points
+ * aus dem `focus`-Feld jedes Unter-Themas. Keine Lorem-Ipsum-Platzhalter.
+ */
+
+function generateFromSubtopic(hauptbereichName: string, hauptbereichSlug: string, st: { name: string; slug: string; focus: string }): SeedComparison {
+  const slug = `beste-${st.slug}`;
+  const title = `Beste ${st.name} im Vergleich`;
+  const focusPoints = st.focus
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  const seoTitle = `Beste ${st.name} 2026 – Anbieter im Vergleich`;
+  const metaDescription = `Vergleich der besten ${st.name} für Selbstständige. ${st.focus}. Alle Kriterien, Vor- und Nachteile auf einen Blick.`;
+
+  const intro = `Wenn du nach ${st.name} suchst, geht es vor allem um ${st.focus}. In diesem Vergleich findest du die wichtigsten Auswahlkriterien und worauf du beim direkten Anbietervergleich achten solltest. Affiliate-Hinweis: Werden Anbieter über Affiliate-Links empfohlen, sind diese als „Werbung / Affiliate-Link" gekennzeichnet.`;
+
+  const bullets = focusPoints.length > 0
+    ? focusPoints.map((p) => `- **${capitalize(p)}** – ein zentrales Kriterium beim Vergleich von ${st.name}.`).join("\n")
+    : `- **Funktionsumfang** – passt der Leistungsumfang zu deinem Bedarf?\n- **Preis-Leistung** – stimmt das Verhältnis im Vergleich zu Alternativen?\n- **Support** – wie schnell und kompetent ist der Kundenservice?`;
+
+  const content = `## Worauf solltest du achten?\n\n${bullets}\n\n## Für wen lohnt sich ${st.name}?\n\nDie Auswahl hängt stark von deiner konkreten Situation ab: Solo-Selbstständige haben andere Anforderungen als wachsende Teams oder größere Unternehmen. Wer ${st.name} im Bereich „${hauptbereichName}“ einsetzt, sollte vor der Entscheidung die eigenen Anforderungen schriftlich festhalten und sie mit den Leistungsversprechen der Anbieter abgleichen.\n\n## Worauf du beim Wechsel achten solltest\n\n- Bestehende Verträge auf Kündigungs­fristen prüfen.\n- Datenübernahme oder Migration im Vorfeld klären.\n- Mindestens zwei bis drei Alternativen direkt vergleichen.\n\n## Hinweis\n\nKonditionen, Preise und Funktionen können sich ändern. Dieser Vergleich ist keine Steuer-, Finanz-, Versicherungs- oder Rechtsberatung. Bitte prüfe Details immer direkt beim Anbieter.`;
+
+  const faq: FaqItem[] = [
+    {
+      q: `Was kostet ${st.name}?`,
+      a: `Die Preise variieren je nach Anbieter und Funktionsumfang. Viele ${st.name.toLowerCase()} starten mit einem kostenlosen Basistarif oder einer Testphase. Premium-Tarife kosten je nach Leistung typischerweise zwischen 10 € und 50 € pro Monat.`,
+    },
+    {
+      q: `Worin unterscheiden sich die Anbieter bei ${st.name}?`,
+      a: `Wichtige Unterschiede zeigen sich in den Bereichen ${st.focus}. Lass dich nicht nur vom Preis leiten – die Total Cost of Ownership ergibt sich aus Funktionsumfang, Integrationen, Support und Migrations­kosten.`,
+    },
+    {
+      q: `Wann lohnt sich ein Wechsel oder die erste Entscheidung für ${st.name}?`,
+      a: `Wenn dein aktueller Workflow zu viel Zeit kostet, wenn Aufgaben manuell erledigt werden müssen, oder wenn Anbieter Funktionen nicht mehr abdecken, ist der Zeitpunkt gekommen. Plane mindestens eine Stunde für einen ersten Vergleich ein.`,
+    },
+  ];
+
+  return {
+    title,
+    slug,
+    categorySlug: hauptbereichSlug,
+    seoTitle,
+    metaDescription,
+    intro,
+    content,
+    faq,
+    offerSlugs: "",
+  };
+}
+
+function capitalize(s: string): string {
+  if (!s) return s;
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// === Generierte Vergleiche aus den Unter-Themen der 16 Hauptbereiche ===
+const handwrittenSlugs = new Set(HANDWRITTEN_COMPARISONS.map((c) => c.slug));
+const GENERATED_COMPARISONS: SeedComparison[] = [];
+
+for (const hb of HAUPTBEREICHE) {
+  for (const st of hb.subtopics) {
+    const slug = `beste-${st.slug}`;
+    if (handwrittenSlugs.has(slug)) continue; // Existiert bereits hand-geschrieben
+    GENERATED_COMPARISONS.push(generateFromSubtopic(hb.name, hb.slug, st));
+  }
+}
+
+export const COMPARISONS: SeedComparison[] = [...HANDWRITTEN_COMPARISONS, ...GENERATED_COMPARISONS];
+
+export const COMPARISON_STATS = {
+  handwritten: HANDWRITTEN_COMPARISONS.length,
+  generated: GENERATED_COMPARISONS.length,
+  total: HANDWRITTEN_COMPARISONS.length + GENERATED_COMPARISONS.length,
+};
+
