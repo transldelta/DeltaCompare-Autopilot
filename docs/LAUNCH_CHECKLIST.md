@@ -2,6 +2,9 @@
 
 Bevor du DeltaCompare live nimmst, gehe die folgenden Punkte durch.
 
+> 💡 Der schnellste Weg: Im Admin unter **`/admin/audit`** siehst du
+> automatisch, was noch offen ist (Demo-Links, fehlende Meta-Daten, leere Vergleiche).
+
 ## Inhalt
 
 - [ ] Demo-Anbieter durch echte Anbieter ersetzen oder klar als Beispiele kennzeichnen.

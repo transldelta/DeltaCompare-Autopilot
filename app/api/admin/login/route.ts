@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   const password = String(form.get("password") || "");
   const next = String(form.get("next") || "/admin/dashboard");
 
-  if (!checkCredentials(email, password)) {
+  if (!(await checkCredentials(email, password))) {
     return NextResponse.redirect(new URL(`/admin/login?error=invalid&next=${encodeURIComponent(next)}`, req.url), { status: 303 });
   }
 
