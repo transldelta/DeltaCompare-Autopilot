@@ -12,6 +12,8 @@ const KEYS = [
   "google_tag_manager_id",
   "meta_pixel_id",
   "tiktok_pixel_id",
+  "adsense_client_id",
+  "ads_enabled",
 ];
 
 export async function POST(req: NextRequest) {

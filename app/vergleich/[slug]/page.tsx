@@ -5,6 +5,7 @@ import ComparisonTable from "@/components/ComparisonTable";
 import OfferCard from "@/components/OfferCard";
 import SeoBlock from "@/components/SeoBlock";
 import FAQ from "@/components/FAQ";
+import AdSlot from "@/components/AdSlot";
 import { buildMetadata, faqJsonLd, breadcrumbsJsonLd } from "@/lib/seo";
 import { safeJsonParse, getSiteUrl } from "@/lib/utils";
 import { AFFILIATE_DISCLOSURE_TEXT } from "@/lib/affiliate";
@@ -59,12 +60,16 @@ export default async function ComparisonPage({ params }: { params: { slug: strin
 
         <p className="mt-3 text-xs text-ink-500">{AFFILIATE_DISCLOSURE_TEXT}</p>
 
+        <AdSlot placementSlug="comparison-after-intro" label="In-Content (nach Einleitung)" />
+
         <div className="mt-8">
           <h2 className="section-heading">Vergleichstabelle</h2>
           <div className="mt-4">
             <ComparisonTable offers={ordered} />
           </div>
         </div>
+
+        <AdSlot placementSlug="comparison-after-table" label="Nach Vergleichstabelle" />
 
         {ordered.length > 0 && (
           <div className="mt-12">
@@ -81,7 +86,12 @@ export default async function ComparisonPage({ params }: { params: { slug: strin
           <SeoBlock title="Worauf solltest du achten?" content={cmp.content} />
         </div>
 
-        {faq.length > 0 && <FAQ items={faq} />}
+        {faq.length > 0 && (
+          <>
+            <FAQ items={faq} />
+            <AdSlot placementSlug="comparison-in-faq" label="Im FAQ-Bereich" showOnMobile={false} />
+          </>
+        )}
 
         <section className="mt-12 rounded-2xl border border-ink-200 bg-ink-50 p-6 text-sm text-ink-700">
           <strong className="block text-ink-900">Hinweis</strong>

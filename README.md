@@ -57,6 +57,15 @@ Komplette Anleitung in **[`docs/DEPLOYMENT_VERCEL.md`](./docs/DEPLOYMENT_VERCEL.
 - [LEGAL_TODO_BEFORE_LAUNCH.md](./docs/LEGAL_TODO_BEFORE_LAUNCH.md) – rechtliche TODOs
 - [LEGAL_NOTES_DE.md](./docs/LEGAL_NOTES_DE.md) – rechtliche Hinweise im Überblick
 
+### Monetarisierung (Display Ads, CPC, CPM, AdSense)
+
+- [MONETIZATION_SETUP.md](./docs/MONETIZATION_SETUP.md) – Übersicht aller Einnahmequellen
+- [CPC_CPM_MONETIZATION.md](./docs/CPC_CPM_MONETIZATION.md) – CPC / CPM / CPL / CPA verständlich erklärt
+- [ADSENSE_SETUP.md](./docs/ADSENSE_SETUP.md) – Google AdSense aktivieren
+- [AWIN_CPC_SETUP.md](./docs/AWIN_CPC_SETUP.md) – Awin CPC-Programme einbinden
+- [COOKIE_CONSENT_AND_ADS.md](./docs/COOKIE_CONSENT_AND_ADS.md) – DSGVO + Tracking
+- [REVENUE_SCENARIOS.md](./docs/REVENUE_SCENARIOS.md) – Modellrechnungen für 10K–250K Besucher
+
 ### Affiliate, SEO und Marketing
 
 - [AFFILIATE_NETWORKS.md](./docs/AFFILIATE_NETWORKS.md) – Anmeldung bei Partner-Netzwerken

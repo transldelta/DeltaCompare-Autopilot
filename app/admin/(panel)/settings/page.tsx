@@ -10,6 +10,8 @@ const FIELDS: Array<{ key: string; label: string; hint?: string }> = [
   { key: "google_tag_manager_id", label: "Google Tag Manager ID", hint: "z. B. GTM-XXXXXX" },
   { key: "meta_pixel_id", label: "Meta Pixel ID" },
   { key: "tiktok_pixel_id", label: "TikTok Pixel ID" },
+  { key: "adsense_client_id", label: "Google AdSense Client-ID", hint: "z. B. ca-pub-XXXXXXXXXXXX – wird in den AdSlot-Komponenten verwendet, wenn Ads aktiv sind." },
+  { key: "ads_enabled", label: "Anzeigen global aktivieren (true/false)", hint: "Hinweis: AdSense lädt zusätzlich nur nach Consent." },
 ];
 
 export default async function AdminSettingsPage() {

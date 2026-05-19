@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { CATEGORIES } from "../data/seed-categories";
 import { OFFERS } from "../data/seed-offers";
 import { COMPARISONS } from "../data/seed-comparisons";
+import { AD_NETWORKS, AD_PLACEMENTS, DEMO_CPC_OFFERS } from "../data/seed-monetization";
 
 const prisma = new PrismaClient();
 
@@ -72,11 +73,46 @@ async function main() {
     { key: "google_tag_manager_id", value: "" },
     { key: "meta_pixel_id", value: "" },
     { key: "tiktok_pixel_id", value: "" },
+    { key: "adsense_client_id", value: "" },
+    { key: "ads_enabled", value: "false" },
   ];
   for (const s of defaultSettings) {
     await prisma.settings.upsert({ where: { key: s.key }, update: {}, create: s });
   }
   console.log("✓ Default-Settings angelegt");
+
+  // === Monetarisierung ===
+  for (const net of AD_NETWORKS) {
+    const existing = await prisma.adNetwork.findFirst({ where: { name: net.name } });
+    if (existing) {
+      await prisma.adNetwork.update({ where: { id: existing.id }, data: net });
+    } else {
+      await prisma.adNetwork.create({ data: net });
+    }
+  }
+  console.log(`✓ ${AD_NETWORKS.length} Ad-Networks angelegt`);
+
+  for (const pl of AD_PLACEMENTS) {
+    await prisma.adPlacement.upsert({
+      where: { slug: pl.slug },
+      update: pl,
+      create: pl,
+    });
+  }
+  console.log(`✓ ${AD_PLACEMENTS.length} Anzeigen-Plätze angelegt`);
+
+  for (const cpc of DEMO_CPC_OFFERS) {
+    const cat = cpc.categorySlug
+      ? await prisma.category.findUnique({ where: { slug: cpc.categorySlug } })
+      : null;
+    const { categorySlug, ...rest } = cpc;
+    await prisma.cpcOffer.upsert({
+      where: { slug: cpc.slug },
+      update: { ...rest, categoryId: cat?.id ?? null },
+      create: { ...rest, categoryId: cat?.id ?? null },
+    });
+  }
+  console.log(`✓ ${DEMO_CPC_OFFERS.length} Demo-CPC-Angebote angelegt`);
 
   console.log("→ Seed erfolgreich abgeschlossen.");
 }

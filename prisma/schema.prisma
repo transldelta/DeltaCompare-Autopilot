@@ -29,6 +29,7 @@ model Category {
   updatedAt   DateTime        @updatedAt
   offers      Offer[]
   comparisons ComparisonPage[]
+  cpcOffers   CpcOffer[]
 }
 
 model Offer {
@@ -135,4 +136,99 @@ model Settings {
   value     String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// === Monetarisierung ===
+
+model AdNetwork {
+  id          String        @id @default(cuid())
+  name        String
+  // ADSENSE | AWIN | FINANCEADS | DIRECT | OTHER
+  type        String        @default("OTHER")
+  status      String        @default("active")
+  publisherId String        @default("")
+  notes       String        @default("")
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  placements  AdPlacement[]
+}
+
+model AdPlacement {
+  id            String         @id @default(cuid())
+  name          String
+  slug          String         @unique
+  // HEADER | SIDEBAR | IN_CONTENT | FOOTER | COMPARISON_TABLE | MOBILE_STICKY
+  placementType String         @default("IN_CONTENT")
+  // DISPLAY | TEXT_LINK | BANNER | NATIVE | CPC_LINK
+  adType        String         @default("DISPLAY")
+  networkId     String?
+  network       AdNetwork?     @relation(fields: [networkId], references: [id])
+  codeSnippet   String         @default("")
+  isActive      Boolean        @default(false)
+  showOnMobile  Boolean        @default(true)
+  showOnDesktop Boolean        @default(true)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  clicks        AdClick[]
+  impressions   AdImpression[]
+}
+
+model CpcOffer {
+  id            String    @id @default(cuid())
+  name          String
+  slug          String    @unique
+  categoryId    String?
+  category      Category? @relation(fields: [categoryId], references: [id])
+  network       String    @default("Direkt")
+  cpcRate       Float     @default(0)
+  targetUrl     String
+  affiliateLink String    @default("")
+  trackingId    String    @default("")
+  description   String    @default("")
+  status        String    @default("active")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  clicks        AdClick[]
+}
+
+model AdClick {
+  id          String       @id @default(cuid())
+  placementId String?
+  placement   AdPlacement? @relation(fields: [placementId], references: [id])
+  cpcOfferId  String?
+  cpcOffer    CpcOffer?    @relation(fields: [cpcOfferId], references: [id])
+  pageSlug    String       @default("")
+  referrer    String       @default("")
+  userAgent   String       @default("")
+  device      String       @default("")
+  ipHash      String       @default("")
+  createdAt   DateTime     @default(now())
+
+  @@index([createdAt])
+}
+
+model AdImpression {
+  id          String      @id @default(cuid())
+  placementId String
+  placement   AdPlacement @relation(fields: [placementId], references: [id])
+  pageSlug    String      @default("")
+  device      String      @default("")
+  createdAt   DateTime    @default(now())
+
+  @@index([createdAt])
+}
+
+model MonetizationReport {
+  id                        String   @id @default(cuid())
+  date                      DateTime
+  impressions               Int      @default(0)
+  adClicks                  Int      @default(0)
+  affiliateClicks           Int      @default(0)
+  leads                     Int      @default(0)
+  sales                     Int      @default(0)
+  estimatedCpcRevenue       Float    @default(0)
+  estimatedCpmRevenue       Float    @default(0)
+  estimatedAffiliateRevenue Float    @default(0)
+  totalEstimatedRevenue     Float    @default(0)
+  createdAt                 DateTime @default(now())
 }
