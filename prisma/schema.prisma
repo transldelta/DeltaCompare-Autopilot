@@ -1,5 +1,4 @@
-// DeltaVergleich - Prisma Schema
-// Provider: PostgreSQL (produktionsfertig).
+// DeltaVergleich - Prisma Schema (Provider: PostgreSQL, produktionsfertig).
 // Lokale SQLite-Dev: cp prisma/schema.sqlite.prisma prisma/schema.prisma
 
 generator client {

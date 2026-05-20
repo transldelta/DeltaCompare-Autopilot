@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import CategoryCard from "@/components/CategoryCard";
+import CategoryTiles from "@/components/CategoryTiles";
 import OfferCard from "@/components/OfferCard";
 import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
@@ -98,20 +98,18 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Kategorien */}
+      {/* Beliebte Kategorien – große farbige Kacheln */}
       <section className="bg-gradient-to-b from-white to-ink-50">
         <div className="container-page py-16">
-        <SectionHeader
-          eyebrow="16 Bereiche"
-          title="Kategorien"
-          subtitle="Wähle ein Themengebiet und entdecke passende Anbieter und Vergleiche."
-          action={{ href: "/kategorien", label: "Alle anzeigen" }}
-        />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c) => (
-            <CategoryCard key={c.id} name={c.name} slug={c.slug} description={c.description} icon={c.icon} offerCount={c._count.offers} />
-          ))}
-        </div>
+          <SectionHeader
+            eyebrow="Beliebte Kategorien"
+            title="Was möchten Sie vergleichen?"
+            subtitle="Von Finanzen und Versicherungen über Energie und Shopping bis zu Business-Tools – alles an einem Ort."
+            action={{ href: "/kategorien", label: "Alle 16 Bereiche" }}
+          />
+          <div className="mt-8">
+            <CategoryTiles />
+          </div>
         </div>
       </section>
 
@@ -199,9 +197,9 @@ export default async function HomePage() {
       </section>
 
       <CTASection
-        title="Bereit zum Vergleichen?"
-        subtitle="Starte mit unseren beliebtesten Vergleichen und finde das passende Angebot für deine Selbstständigkeit."
-        primary={{ href: "/vergleich", label: "Jetzt vergleichen" }}
+        title="Finden Sie schneller das passende Angebot."
+        subtitle="Vergleichen Sie kostenlos und transparent – für Verbraucher, Familien, Selbstständige und Unternehmen."
+        primary={{ href: "/vergleich", label: "Vergleiche starten" }}
         secondary={{ href: "/kategorien", label: "Kategorien ansehen" }}
       />
     </>
