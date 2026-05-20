@@ -1,5 +1,64 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { DotPattern } from "./illustrations";
+
+/**
+ * Einheitlicher farbiger Seitenkopf für öffentliche Unterseiten.
+ * Gradient-Hintergrund, Glyph, Titel, Untertitel, optionale Chips, Glow + Pattern.
+ */
+export function PublicPageHero({
+  eyebrow,
+  title,
+  subtitle,
+  glyph = "◆",
+  gradient = "from-brand-950 via-brand-900 to-brand-700",
+  chips,
+  breadcrumbs,
+}: {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  glyph?: string;
+  gradient?: string;
+  chips?: { label: string; href: string }[];
+  breadcrumbs?: React.ReactNode;
+}) {
+  return (
+    <section className={cn("relative overflow-hidden bg-gradient-to-br text-white", gradient)}>
+      <DotPattern className="pointer-events-none absolute inset-0 text-white/[0.07]" />
+      <div className="pointer-events-none absolute -right-28 -top-28 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 left-1/4 h-80 w-80 rounded-full bg-accent-400/15 blur-3xl" />
+      <div className="relative">
+        {breadcrumbs}
+        <div className="container-page py-14 sm:py-20">
+          <div className="flex items-start gap-4">
+            <span className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-3xl backdrop-blur sm:flex">
+              {glyph}
+            </span>
+            <div className="max-w-3xl">
+              {eyebrow && <div className="text-xs font-bold uppercase tracking-widest text-white/70">{eyebrow}</div>}
+              <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">{title}</h1>
+              {subtitle && <p className="mt-4 text-lg leading-relaxed text-white/85">{subtitle}</p>}
+              {chips && chips.length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {chips.map((c) => (
+                    <Link
+                      key={c.label}
+                      href={c.href}
+                      className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur transition hover:bg-white/20"
+                    >
+                      {c.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /** Bewertungs-Badge mit Sternen-Optik. */
 export function RatingBadge({ rating, className }: { rating: number; className?: string }) {

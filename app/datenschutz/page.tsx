@@ -1,4 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { PublicPageHero } from "@/components/ui";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -12,10 +13,16 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Datenschutz" }]} />
-      <section className="container-page py-10">
-        <h1 className="section-heading">Datenschutzerklärung</h1>
-        <div className="prose-dc mt-6 max-w-3xl">
+      <PublicPageHero
+        glyph="⚿"
+        eyebrow="Rechtliches"
+        title="Datenschutzerklärung"
+        subtitle="Datenschutzerklärung gemäß DSGVO. Bitte vor Veröffentlichung prüfen lassen."
+        gradient="from-ink-900 via-brand-900 to-brand-800"
+        breadcrumbs={<Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Datenschutz" }]} light />}
+      />
+      <section className="container-page py-14">
+        <div className="prose-dc max-w-3xl rounded-2xl border border-ink-200/80 bg-white p-8 shadow-card">
           <p><strong>Bitte vor Veröffentlichung anpassen.</strong> Diese Vorlage ersetzt keine juristische Prüfung.</p>
 
           <h2>1. Verantwortlicher</h2>

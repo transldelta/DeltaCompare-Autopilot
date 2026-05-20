@@ -1,4 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { PublicPageHero } from "@/components/ui";
 import { buildMetadata } from "@/lib/seo";
 import { AFFILIATE_DISCLOSURE_TEXT } from "@/lib/affiliate";
 import type { Metadata } from "next";
@@ -12,10 +13,16 @@ export const metadata: Metadata = buildMetadata({
 export default function AffiliatePage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Affiliate-Hinweis" }]} />
-      <section className="container-page py-10">
-        <h1 className="section-heading">Affiliate-Hinweis</h1>
-        <div className="prose-dc mt-6 max-w-3xl">
+      <PublicPageHero
+        glyph="◎"
+        eyebrow="Rechtliches"
+        title="Affiliate-Hinweis"
+        subtitle="Transparente Information zu Affiliate-Links auf DeltaVergleich."
+        gradient="from-ink-900 via-brand-900 to-brand-800"
+        breadcrumbs={<Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Affiliate-Hinweis" }]} light />}
+      />
+      <section className="container-page py-14">
+        <div className="prose-dc max-w-3xl rounded-2xl border border-ink-200/80 bg-white p-8 shadow-card">
           <p>{AFFILIATE_DISCLOSURE_TEXT}</p>
           <h2>Was sind Affiliate-Links?</h2>
           <p>

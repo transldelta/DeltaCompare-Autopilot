@@ -1,4 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { PublicPageHero } from "@/components/ui";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -11,10 +12,16 @@ export const metadata: Metadata = buildMetadata({
 export default function DisclaimerPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Haftungsausschluss" }]} />
-      <section className="container-page py-10">
-        <h1 className="section-heading">Haftungsausschluss</h1>
-        <div className="prose-dc mt-6 max-w-3xl">
+      <PublicPageHero
+        glyph="⚖"
+        eyebrow="Rechtliches"
+        title="Haftungsausschluss"
+        subtitle="Keine Finanz-, Steuer- oder Rechtsberatung. Angaben ohne Gewähr."
+        gradient="from-ink-900 via-brand-900 to-brand-800"
+        breadcrumbs={<Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Haftungsausschluss" }]} light />}
+      />
+      <section className="container-page py-14">
+        <div className="prose-dc max-w-3xl rounded-2xl border border-ink-200/80 bg-white p-8 shadow-card">
           <h2>Keine Beratung</h2>
           <p>
             Die Inhalte auf DeltaVergleich stellen keine Finanz-, Steuer-, Versicherungs- oder Rechts­beratung dar.

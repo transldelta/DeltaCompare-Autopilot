@@ -1,35 +1,48 @@
-import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import VisualArticleCard from "@/components/VisualArticleCard";
+import { PublicPageHero, CTASection } from "@/components/ui";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Ratgeber",
-  description: "Ratgeber-Artikel für Selbstständige zu Geschäftskonten, Buchhaltung, Versicherungen und mehr.",
+  description: "Praxisnahe Artikel für Verbraucher, Familien, Selbstständige und Unternehmen.",
   path: "/ratgeber",
 });
 
 export default function RatgeberPage() {
   return (
     <>
-      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Ratgeber" }]} />
-      <section className="container-page py-10">
-        <h1 className="section-heading">Ratgeber</h1>
-        <p className="mt-2 max-w-3xl text-ink-600">
-          Praxisnahe Artikel zu Buchhaltung, Versicherungen, Tools und Strukturen für Selbstständige.
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {BLOG_POSTS.map((p) => (
-            <Link key={p.slug} href={`/ratgeber/${p.slug}`} className="card hover:-translate-y-0.5">
-              <div className="text-xs uppercase tracking-wide text-brand-700">{p.category}</div>
-              <h2 className="mt-1 text-lg font-semibold text-ink-900">{p.title}</h2>
-              <p className="mt-2 line-clamp-3 text-sm text-ink-600">{p.description}</p>
-              <span className="mt-3 inline-block text-sm font-medium text-brand-700">Artikel lesen →</span>
-            </Link>
+      <PublicPageHero
+        glyph="✎"
+        eyebrow="Ratgeber & Wissen"
+        title="Ratgeber"
+        subtitle="Praxisnahe Artikel für Verbraucher, Familien, Selbstständige und Unternehmen – verständlich erklärt."
+        gradient="from-violet-700 via-brand-800 to-brand-700"
+        breadcrumbs={<Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Ratgeber" }]} light />}
+      />
+      <section className="container-page py-14">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {BLOG_POSTS.map((p, i) => (
+            <VisualArticleCard
+              key={p.slug}
+              title={p.title}
+              slug={p.slug}
+              description={p.description}
+              category={p.category}
+              content={p.content}
+              index={i}
+            />
           ))}
         </div>
       </section>
+      <CTASection
+        title="Vom Wissen zur Entscheidung."
+        subtitle="Nutze unsere Vergleiche, um das passende Angebot zu finden – kostenlos und transparent."
+        primary={{ href: "/vergleich", label: "Vergleiche ansehen" }}
+        secondary={{ href: "/kategorien", label: "Kategorien" }}
+      />
     </>
   );
 }

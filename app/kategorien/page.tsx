@@ -1,16 +1,16 @@
 import { prisma } from "@/lib/prisma";
 import { safe } from "@/lib/safe";
-import CategoryCard from "@/components/CategoryCard";
+import VisualCategoryCard from "@/components/VisualCategoryCard";
+import { PublicPageHero, CTASection } from "@/components/ui";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { PageHero } from "@/components/ui";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Alle Kategorien",
-  description: "Alle Kategorien auf DeltaVergleich – von Geschäftskonten bis zu Tools für Dolmetscher und Übersetzer.",
+  title: "Alle Vergleichsbereiche",
+  description: "Entdecke Vergleiche für Alltag, Finanzen, Versicherungen, Shopping, Reisen, Business und digitale Tools.",
   path: "/kategorien",
 });
 
@@ -23,26 +23,26 @@ export default async function CategoriesPage() {
 
   return (
     <>
-      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Kategorien" }]} />
-      <PageHero
+      <PublicPageHero
+        glyph="◆"
         eyebrow="16 Bereiche"
-        title="Alle Kategorien"
-        subtitle="Stöbere durch unsere Themengebiete und finde Vergleiche, Anbieter und Ratgeber-Artikel zu jeder Kategorie."
+        title="Alle Vergleichsbereiche auf einen Blick"
+        subtitle="Entdecke Vergleiche für Alltag, Finanzen, Versicherungen, Shopping, Reisen, Business und digitale Tools."
+        breadcrumbs={<Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Kategorien" }]} light />}
       />
-      <section className="container-page py-12">
+      <section className="container-page py-14">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((c) => (
-            <CategoryCard
-              key={c.id}
-              name={c.name}
-              slug={c.slug}
-              description={c.description}
-              icon={c.icon}
-              offerCount={c._count.offers}
-            />
+            <VisualCategoryCard key={c.id} name={c.name} slug={c.slug} description={c.description} offerCount={c._count.offers} />
           ))}
         </div>
       </section>
+      <CTASection
+        title="Nicht das richtige gefunden?"
+        subtitle="Stöbere durch alle Vergleiche oder starte direkt mit den beliebtesten Themen."
+        primary={{ href: "/vergleich", label: "Alle Vergleiche" }}
+        secondary={{ href: "/", label: "Zur Startseite" }}
+      />
     </>
   );
 }
