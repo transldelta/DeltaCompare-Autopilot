@@ -8,9 +8,9 @@ import { AD_NETWORKS, AD_PLACEMENTS, DEMO_CPC_OFFERS } from "../data/seed-moneti
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("→ DeltaCompare Seed startet");
+  console.log("→ DeltaVergleich Seed startet");
 
-  const rawEmail = process.env.ADMIN_EMAIL || "admin@deltacompare.local";
+  const rawEmail = process.env.ADMIN_EMAIL || "admin@deltavergleich.de";
   const adminEmail = rawEmail.trim().toLowerCase();
   const adminPassword = process.env.ADMIN_PASSWORD || "change-me";
   const passwordHash = await bcrypt.hash(adminPassword, 10);
@@ -79,8 +79,8 @@ async function main() {
   console.log(`✓ ${COMPARISONS.length} Vergleichsseiten angelegt`);
 
   const defaultSettings = [
-    { key: "site_name", value: "DeltaCompare" },
-    { key: "site_domain", value: "deltacompare.local" },
+    { key: "site_name", value: "DeltaVergleich" },
+    { key: "site_domain", value: "deltavergleich.de" },
     {
       key: "affiliate_disclosure",
       value:

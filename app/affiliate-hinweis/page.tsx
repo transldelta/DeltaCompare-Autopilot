@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Affiliate-Hinweis",
-  description: "Transparente Information zu Affiliate-Links auf DeltaCompare.",
+  description: "Transparente Information zu Affiliate-Links auf DeltaVergleich.",
   path: "/affiliate-hinweis",
 });
 

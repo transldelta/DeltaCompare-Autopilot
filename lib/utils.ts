@@ -40,7 +40,7 @@ export function getSiteUrl(): string {
 }
 
 export function getSiteName(): string {
-  return process.env.NEXT_PUBLIC_SITE_NAME || "DeltaCompare";
+  return process.env.NEXT_PUBLIC_SITE_NAME || "DeltaVergleich";
 }
 
 export function isDemoLink(url: string): boolean {

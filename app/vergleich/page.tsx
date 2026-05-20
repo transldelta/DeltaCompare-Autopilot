@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildMetadata({
   title: "Alle Vergleiche",
-  description: "Alle aktuellen Vergleiche auf DeltaCompare – Geschäftskonten, Versicherungen, Buchhaltung und mehr.",
+  description: "Alle aktuellen Vergleiche auf DeltaVergleich – Geschäftskonten, Versicherungen, Buchhaltung und mehr.",
   path: "/vergleich",
 });
 

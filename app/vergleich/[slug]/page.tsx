@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { safe } from "@/lib/safe";
 import { notFound } from "next/navigation";
@@ -50,21 +51,40 @@ export default async function ComparisonPage({ params }: { params: { slug: strin
   const siteUrl = getSiteUrl();
   const pageUrl = `${siteUrl}/vergleich/${cmp.slug}`;
 
+  // Verwandte Vergleiche aus gleicher Kategorie
+  const related = await safe(
+    () => prisma.comparisonPage.findMany({
+      where: { categoryId: cmp.categoryId, status: "active", slug: { not: cmp.slug } },
+      take: 3,
+      orderBy: { createdAt: "desc" },
+    }),
+    [],
+    "comparison.related",
+  );
+
   return (
     <>
-      <Breadcrumbs
-        items={[
-          { name: "Start", href: "/" },
-          { name: "Vergleiche", href: "/vergleich" },
-          { name: cmp.title },
-        ]}
-      />
-      <article className="container-page py-10">
-        <div className="text-xs uppercase tracking-wide text-brand-700">{cmp.category.name}</div>
-        <h1 className="mt-2 text-3xl font-extrabold text-ink-900 sm:text-4xl">{cmp.title}</h1>
-        <p className="mt-4 max-w-3xl text-lg text-ink-700">{cmp.intro}</p>
+      {/* Seitenkopf */}
+      <section className="border-b border-ink-200/70 bg-hero-gradient">
+        <Breadcrumbs
+          items={[
+            { name: "Start", href: "/" },
+            { name: "Vergleiche", href: "/vergleich" },
+            { name: cmp.title },
+          ]}
+        />
+        <div className="container-page pb-10 pt-3">
+          <Link href={`/kategorien/${cmp.category.slug}`} className="badge-brand">{cmp.category.name}</Link>
+          <h1 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">{cmp.title}</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-600">{cmp.intro}</p>
+        </div>
+      </section>
 
-        <p className="mt-3 text-xs text-ink-500">{AFFILIATE_DISCLOSURE_TEXT}</p>
+      <article className="container-page py-10">
+        <div className="rounded-2xl border border-brand-100 bg-brand-50/60 px-5 py-3.5 text-sm text-ink-700">
+          <span className="font-semibold text-ink-900">Transparenz:</span> Diese Seite enthält Affiliate-Links.{" "}
+          {AFFILIATE_DISCLOSURE_TEXT}
+        </div>
 
         <AdSlot placementSlug="comparison-after-intro" label="In-Content (nach Einleitung)" />
 
@@ -97,6 +117,24 @@ export default async function ComparisonPage({ params }: { params: { slug: strin
             <FAQ items={faq} />
             <AdSlot placementSlug="comparison-in-faq" label="Im FAQ-Bereich" showOnMobile={false} />
           </>
+        )}
+
+        {related.length > 0 && (
+          <div className="mt-14">
+            <h2 className="section-heading">Verwandte Vergleiche</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((r) => (
+                <Link key={r.id} href={`/vergleich/${r.slug}`} className="card group">
+                  <span className="badge-brand">{cmp.category.name}</span>
+                  <h3 className="mt-3 text-base font-bold text-ink-900">{r.title}</h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-ink-600">{r.metaDescription}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
+                    Öffnen <span className="transition group-hover:translate-x-0.5">→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         )}
 
         <section className="mt-12 rounded-2xl border border-ink-200 bg-ink-50 p-6 text-sm text-ink-700">

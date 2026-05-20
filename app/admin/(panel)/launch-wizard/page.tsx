@@ -132,32 +132,41 @@ export default async function LaunchWizardPage() {
     "live";
 
   const statusLabels = {
-    not_ready: { label: "Nicht bereit", color: "bg-rose-100 text-rose-800 border-rose-200" },
-    almost: { label: "Fast bereit", color: "bg-amber-100 text-amber-900 border-amber-200" },
-    test: { label: "Bereit für Test-Deployment", color: "bg-sky-100 text-sky-900 border-sky-200" },
-    live: { label: "Bereit für Livegang", color: "bg-emerald-100 text-emerald-900 border-emerald-200" },
+    not_ready: { label: "Nicht bereit", color: "bg-rose-100 text-rose-800 border-rose-200", bar: "bg-rose-500" },
+    almost: { label: "Fast bereit", color: "bg-amber-100 text-amber-900 border-amber-200", bar: "bg-amber-500" },
+    test: { label: "Bereit für Test-Deployment", color: "bg-sky-100 text-sky-900 border-sky-200", bar: "bg-sky-500" },
+    live: { label: "Bereit für Livegang", color: "bg-emerald-100 text-emerald-900 border-emerald-200", bar: "bg-emerald-500" },
   };
 
   return (
     <div className="p-6 lg:p-8 space-y-8">
       <header>
-        <h1 className="text-2xl font-bold text-ink-900">Launch-Assistent</h1>
+        <h1 className="text-2xl font-extrabold text-ink-900">Launch-Assistent</h1>
         <p className="mt-1 max-w-3xl text-sm text-ink-600">
           Schritt-für-Schritt-Prüfung vor dem Go-Live. Jede Sektion verlinkt zu dem Admin-Bereich, in dem du Probleme behebst.
         </p>
       </header>
 
-      <section className={`rounded-2xl border p-5 ${statusLabels[status].color}`}>
-        <div className="flex flex-wrap items-center justify-between gap-3">
+      <section className={`rounded-2xl border p-6 ${statusLabels[status].color}`}>
+        <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <div className="text-sm font-semibold uppercase tracking-wide">Launch-Status</div>
-            <div className="text-3xl font-bold">{statusLabels[status].label}</div>
-            <div className="mt-1 text-sm">{okCount} von {totalCount} automatischen Checks bestanden ({readiness} %)</div>
+            <div className="text-xs font-bold uppercase tracking-widest opacity-80">Launch-Status</div>
+            <div className="mt-1 text-3xl font-extrabold">{statusLabels[status].label}</div>
+            <div className="mt-1 text-sm">{okCount} von {totalCount} automatischen Checks bestanden</div>
           </div>
           <div className="text-right text-xs">
             <div>Demo-Links offen: <strong>{totalDemo}</strong></div>
             <div>Aktive Anzeigen-Plätze: <strong>{activePlacements.length}</strong></div>
             <div>Vergleichsseiten: <strong>{comparisons.length}</strong></div>
+          </div>
+        </div>
+        <div className="mt-5">
+          <div className="flex items-center justify-between text-xs font-semibold">
+            <span>Fortschritt</span>
+            <span>{readiness} %</span>
+          </div>
+          <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-white/60">
+            <div className={`h-full rounded-full transition-all ${statusLabels[status].bar}`} style={{ width: `${readiness}%` }} />
           </div>
         </div>
       </section>
@@ -267,7 +276,7 @@ export default async function LaunchWizardPage() {
               steps={[
                 "Im Partner-Dashboard das Programm wählen",
                 "Tracking-Link kopieren",
-                "In DeltaCompare unter /admin/offers/<anbieter> einsetzen",
+                "In DeltaVergleich unter /admin/offers/<anbieter> einsetzen",
                 "Mit /go/<slug>?from=test verifizieren",
               ]}
             />
@@ -348,7 +357,7 @@ export default async function LaunchWizardPage() {
       <Section title="11. Repo-Hinweis" subtitle="Das Projekt liegt aktuell im Repo transldelta/XAU-USD.">
         <div className="rounded-xl border border-ink-200 bg-white p-5 text-sm text-ink-700">
           <p>
-            Empfehlung: Repo umbenennen in <code>transldelta/DeltaCompare</code> oder neu anlegen und Bundle pushen.
+            Empfehlung: Repo umbenennen in <code>transldelta/DeltaVergleich</code> oder neu anlegen und Bundle pushen.
           </p>
           <p className="mt-2">
             Vollständige Anleitung in <code>docs/REPO_RENAME_RECOMMENDATION.md</code>.

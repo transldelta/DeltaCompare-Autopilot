@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildMetadata({
   title: "Alle Anbieter",
-  description: "Alle Anbieter im DeltaCompare-Portal mit Bewertung, Vor- und Nachteilen.",
+  description: "Alle Anbieter im DeltaVergleich-Portal mit Bewertung, Vor- und Nachteilen.",
   path: "/anbieter",
 });
 

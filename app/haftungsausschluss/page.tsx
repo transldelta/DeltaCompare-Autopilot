@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Haftungsausschluss",
-  description: "Haftungsausschluss von DeltaCompare. Keine Finanz-, Steuer- oder Rechtsberatung.",
+  description: "Haftungsausschluss von DeltaVergleich. Keine Finanz-, Steuer- oder Rechtsberatung.",
   path: "/haftungsausschluss",
 });
 
@@ -17,7 +17,7 @@ export default function DisclaimerPage() {
         <div className="prose-dc mt-6 max-w-3xl">
           <h2>Keine Beratung</h2>
           <p>
-            Die Inhalte auf DeltaCompare stellen keine Finanz-, Steuer-, Versicherungs- oder Rechts­beratung dar.
+            Die Inhalte auf DeltaVergleich stellen keine Finanz-, Steuer-, Versicherungs- oder Rechts­beratung dar.
             Sie ersetzen nicht die individuelle Beratung durch Fachpersonen.
           </p>
           <h2>Aktualität</h2>

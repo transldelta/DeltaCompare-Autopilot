@@ -12,10 +12,12 @@ type BuildMetadataInput = {
 export function buildMetadata({ title, description, path = "/", image, noIndex }: BuildMetadataInput): Metadata {
   const siteName = getSiteName();
   const siteUrl = getSiteUrl();
-  const fullTitle = title ? `${title} | ${siteName}` : `${siteName} – Vergleichsportal für Selbstständige`;
+  const fullTitle = title
+    ? `${title} | ${siteName}`
+    : `${siteName} – Vergleiche für Selbstständige, Business, Finanzen und digitale Tools`;
   const desc =
     description ||
-    "Unabhängiges deutsches Vergleichsportal für Tools, Konten, Versicherungen und Services für Selbstständige.";
+    "Vergleiche für Selbstständige, Business, Finanzen und digitale Tools. DeltaVergleich hilft Selbstständigen und kleinen Unternehmen, passende Anbieter schneller zu finden.";
   const url = `${siteUrl}${path}`;
   const ogImage = image || `${siteUrl}/og/default.svg`;
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Impressum",
-  description: "Impressum von DeltaCompare – Anbieterkennzeichnung gemäß § 5 TMG.",
+  description: "Impressum von DeltaVergleich – Anbieterkennzeichnung gemäß § 5 TMG.",
   path: "/impressum",
   noIndex: true,
 });

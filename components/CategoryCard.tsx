@@ -8,20 +8,48 @@ type Props = {
   offerCount?: number;
 };
 
-export default function CategoryCard({ name, slug, description, offerCount }: Props) {
+const ICON_GLYPH: Record<string, string> = {
+  Banknote: "₿",
+  CreditCard: "▭",
+  PiggyBank: "◑",
+  Shield: "⛨",
+  Calculator: "▦",
+  FileText: "▤",
+  ShoppingBag: "▣",
+  LayoutTemplate: "▥",
+  Server: "▩",
+  Users: "◍",
+  Mail: "✉",
+  Briefcase: "▮",
+  Wrench: "✦",
+  Languages: "文",
+  Plug: "◉",
+  GraduationCap: "◆",
+  Megaphone: "◈",
+  Scale: "⚖",
+  ListChecks: "✓",
+  Plane: "✈",
+  Home: "⌂",
+  Tag: "●",
+};
+
+export default function CategoryCard({ name, slug, description, icon, offerCount }: Props) {
+  const glyph = (icon && ICON_GLYPH[icon]) || "●";
   return (
-    <Link href={`/kategorien/${slug}`} className="card block hover:-translate-y-0.5">
+    <Link href={`/kategorien/${slug}`} className="card group block">
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-lg font-semibold text-ink-900">{name}</h3>
-        {typeof offerCount === "number" && (
-          <span className="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-medium text-brand-700">
-            {offerCount} {offerCount === 1 ? "Anbieter" : "Anbieter"}
-          </span>
+        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-lg text-brand-600 transition group-hover:bg-brand-gradient group-hover:text-white">
+          {glyph}
+        </span>
+        {typeof offerCount === "number" && offerCount > 0 && (
+          <span className="badge-neutral">{offerCount} Anbieter</span>
         )}
       </div>
-      <p className="mt-2 line-clamp-3 text-sm text-ink-600">{description}</p>
-      <span className="mt-4 inline-flex items-center text-sm font-medium text-brand-700">
-        Vergleichen →
+      <h3 className="mt-4 text-lg font-bold text-ink-900">{name}</h3>
+      <p className="mt-1.5 line-clamp-2 text-sm text-ink-600">{description}</p>
+      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
+        Vergleiche ansehen
+        <span className="transition group-hover:translate-x-0.5">→</span>
       </span>
     </Link>
   );

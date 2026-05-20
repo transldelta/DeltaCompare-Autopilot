@@ -1,5 +1,5 @@
 /**
- * 16 Hauptbereiche von DeltaCompare mit ihren Unter-Themen.
+ * 16 Hauptbereiche von DeltaVergleich mit ihren Unter-Themen.
  * Dient als Single Source of Truth für Kategorien und Vergleichsseiten-Stubs.
  */
 

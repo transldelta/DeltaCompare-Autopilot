@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Kontakt",
-  description: "Kontaktinformationen von DeltaCompare – schreibe uns bei Fragen, Hinweisen oder Kooperations­anfragen.",
+  description: "Kontaktinformationen von DeltaVergleich – schreibe uns bei Fragen, Hinweisen oder Kooperations­anfragen.",
   path: "/kontakt",
 });
 
