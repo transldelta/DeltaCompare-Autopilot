@@ -1,8 +1,6 @@
 // DeltaVergleich - Prisma Schema
 // Provider: PostgreSQL (produktionsfertig).
-//
-// Lokale Entwicklung mit SQLite: cp prisma/schema.sqlite.prisma prisma/schema.prisma
-// Auf Vercel/Production muss DATABASE_URL eine echte Postgres-URL sein.
+// Lokale SQLite-Dev: cp prisma/schema.sqlite.prisma prisma/schema.prisma
 
 generator client {
   provider = "prisma-client-js"

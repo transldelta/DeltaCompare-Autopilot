@@ -42,24 +42,26 @@ export default function Footer() {
   const year = new Date().getFullYear();
   const site = getSiteName();
   return (
-    <footer className="mt-20 border-t border-ink-200 bg-ink-50">
-      <div className="container-page grid gap-10 py-14 lg:grid-cols-12">
+    <footer className="relative mt-20 overflow-hidden bg-brand-950 text-brand-100">
+      <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-brand-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 right-1/4 h-80 w-80 rounded-full bg-accent-500/10 blur-3xl" />
+      <div className="container-page relative grid gap-10 py-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <Logo />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-600">
-            Vergleiche für Selbstständige, Business, Finanzen und digitale Tools. Unabhängig, transparent gekennzeichnet
-            und auf Selbstständige zugeschnitten.
+          <Logo variant="light" />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-200">
+            Vergleichen. Entscheiden. Sparen. Unabhängige Vergleiche für Verbraucher, Familien, Selbstständige und
+            Unternehmen – transparent gekennzeichnet.
           </p>
-          <p className="mt-4 text-xs leading-relaxed text-ink-500">{AFFILIATE_DISCLOSURE_TEXT}</p>
+          <p className="mt-4 max-w-xs text-xs leading-relaxed text-brand-300/80">{AFFILIATE_DISCLOSURE_TEXT}</p>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-bold text-ink-900">{col.title}</h4>
-              <ul className="mt-3 space-y-2 text-sm text-ink-600">
+              <h4 className="text-sm font-bold text-white">{col.title}</h4>
+              <ul className="mt-3 space-y-2 text-sm text-brand-200">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="transition hover:text-brand-700">
+                    <Link href={l.href} className="transition hover:text-white">
                       {l.label}
                     </Link>
                   </li>
@@ -69,9 +71,9 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="border-t border-ink-200">
-        <div className="container-page flex flex-col items-center justify-between gap-2 py-5 text-center text-xs text-ink-500 sm:flex-row sm:text-left">
-          <span>© {year} {site}. Alle Angaben ohne Gewähr. Preise und Verfügbarkeit können sich ändern.</span>
+      <div className="relative border-t border-white/10">
+        <div className="container-page flex flex-col items-center justify-between gap-2 py-5 text-center text-xs text-brand-300 sm:flex-row sm:text-left">
+          <span>© {year} {site} · deltavergleich.de · Alle Angaben ohne Gewähr.</span>
           <span>Keine Finanz-, Steuer- oder Rechtsberatung.</span>
         </div>
       </div>

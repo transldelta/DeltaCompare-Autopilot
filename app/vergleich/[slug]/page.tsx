@@ -8,6 +8,8 @@ import OfferCard from "@/components/OfferCard";
 import SeoBlock from "@/components/SeoBlock";
 import FAQ from "@/components/FAQ";
 import AdSlot from "@/components/AdSlot";
+import { DotPattern } from "@/components/illustrations";
+import { getCategoryVisual } from "@/lib/categoryVisuals";
 import { buildMetadata, faqJsonLd, breadcrumbsJsonLd } from "@/lib/seo";
 import { safeJsonParse, getSiteUrl } from "@/lib/utils";
 import { AFFILIATE_DISCLOSURE_TEXT } from "@/lib/affiliate";
@@ -62,21 +64,37 @@ export default async function ComparisonPage({ params }: { params: { slug: strin
     "comparison.related",
   );
 
+  const visual = getCategoryVisual(cmp.category.slug);
+
   return (
     <>
-      {/* Seitenkopf */}
-      <section className="border-b border-ink-200/70 bg-hero-gradient">
-        <Breadcrumbs
-          items={[
-            { name: "Start", href: "/" },
-            { name: "Vergleiche", href: "/vergleich" },
-            { name: cmp.title },
-          ]}
-        />
-        <div className="container-page pb-10 pt-3">
-          <Link href={`/kategorien/${cmp.category.slug}`} className="badge-brand">{cmp.category.name}</Link>
-          <h1 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">{cmp.title}</h1>
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-600">{cmp.intro}</p>
+      {/* Seitenkopf mit thematischem Farb-Banner */}
+      <section className={`relative overflow-hidden border-b border-ink-200/70 bg-gradient-to-br ${visual.gradient} text-white`}>
+        <DotPattern className="pointer-events-none absolute inset-0 text-white/10" />
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        <div className="relative">
+          <Breadcrumbs
+            items={[
+              { name: "Start", href: "/" },
+              { name: "Vergleiche", href: "/vergleich" },
+              { name: cmp.title },
+            ]}
+            light
+          />
+          <div className="container-page pb-12 pt-3">
+            <div className="flex items-start gap-4">
+              <span className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-3xl backdrop-blur sm:flex">
+                {visual.glyph}
+              </span>
+              <div>
+                <Link href={`/kategorien/${cmp.category.slug}`} className="inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+                  {cmp.category.name}
+                </Link>
+                <h1 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl">{cmp.title}</h1>
+                <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/90">{cmp.intro}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

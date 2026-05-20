@@ -5,24 +5,32 @@ import OfferCard from "@/components/OfferCard";
 import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
 import { SectionHeader, CTASection, IconTile } from "@/components/ui";
+import { CompareScene, SaveScene, ContractScene } from "@/components/illustrations";
 import { prisma } from "@/lib/prisma";
 import { safe } from "@/lib/safe";
+import { getCategoryVisual } from "@/lib/categoryVisuals";
 import { AFFILIATE_DISCLOSURE_TEXT } from "@/lib/affiliate";
 
 export const dynamic = "force-dynamic";
 
+const STEPS = [
+  { Scene: CompareScene, step: "1", title: "Vergleichen", text: "Wähle eine Kategorie und sieh Anbieter, Konditionen und Bewertungen übersichtlich nebeneinander." },
+  { Scene: ContractScene, step: "2", title: "Entscheiden", text: "Vor- und Nachteile, Preise und Empfehlungen helfen dir, die passende Wahl zu treffen." },
+  { Scene: SaveScene, step: "3", title: "Sparen", text: "Wechsle direkt zum Anbieter und sichere dir bessere Konditionen – transparent und kostenlos." },
+];
+
 const WHY = [
   { glyph: "◎", title: "Unabhängig & transparent", text: "Wir kennzeichnen Affiliate-Links klar und bewerten Anbieter nach Eignung – nicht nach Provisionshöhe." },
-  { glyph: "▣", title: "Auf Selbstständige fokussiert", text: "Vom Geschäftskonto bis zum CAT-Tool: Inhalte für den echten Business-Alltag." },
-  { glyph: "✦", title: "Schnell zur Entscheidung", text: "Klare Vergleichstabellen, Vor- und Nachteile auf einen Blick, ohne Werbe-Überladung." },
+  { glyph: "✦", title: "Riesige Auswahl", text: "16 Bereiche und 181 Vergleichsseiten – von Finanzen über Versicherungen bis zu Business-Tools." },
+  { glyph: "◆", title: "Schnell zur Entscheidung", text: "Klare Vergleichstabellen, Vor- und Nachteile auf einen Blick, ohne Werbe-Überladung." },
 ];
 
 const FOR_WHOM = [
-  { glyph: "▮", title: "Selbstständige", text: "Konten, Tools und Versicherungen für den Solo-Alltag." },
-  { glyph: "✦", title: "Freiberufler", text: "Buchhaltung, Steuer-Tools und Absicherung." },
-  { glyph: "▣", title: "Kleine Unternehmen", text: "CRM, E-Mail-Marketing, Hosting und mehr." },
-  { glyph: "◈", title: "E-Commerce-Starter", text: "Shopify, Zahlungsanbieter, Versand und Tools." },
-  { glyph: "文", title: "Dolmetscher & Übersetzer", text: "CAT-Tools, Headsets, Plattformen und Abrechnung." },
+  { glyph: "◉", title: "Verbraucher", text: "Strom, Internet, Handytarife und Versicherungen vergleichen." },
+  { glyph: "⌂", title: "Familien", text: "Haushalt, Energie, Absicherung und Reisen clever planen." },
+  { glyph: "▣", title: "Online-Käufer", text: "Shopping-Tools, Zahlungsanbieter und Angebote finden." },
+  { glyph: "▮", title: "Selbstständige", text: "Konten, Buchhaltung, Tools und Versicherungen." },
+  { glyph: "✦", title: "Unternehmen", text: "CRM, Hosting, Software und Business-Services." },
 ];
 
 export default async function HomePage() {
@@ -48,7 +56,7 @@ export default async function HomePage() {
   const dbEmpty = categories.length === 0 && featuredOffers.length === 0 && topComparisons.length === 0;
 
   const faq = [
-    { q: "Was ist DeltaVergleich?", a: "DeltaVergleich ist ein unabhängiges Vergleichsportal für Tools, Konten, Versicherungen und Services für Selbstständige, Freiberufler und kleine Unternehmen." },
+    { q: "Was ist DeltaVergleich?", a: "DeltaVergleich ist ein unabhängiges Vergleichsportal für Verbraucher, Familien, Online-Käufer, Selbstständige und Unternehmen – von Finanzen und Versicherungen über Internet und Shopping bis zu Business-Tools." },
     { q: "Wie verdient DeltaVergleich Geld?", a: "Wir nutzen Affiliate-Links. Wenn du über einen unserer Links ein Produkt abschließt, erhalten wir gegebenenfalls eine Provision – für dich entstehen keine zusätzlichen Kosten." },
     { q: "Ersetzt DeltaVergleich eine Beratung?", a: "Nein. Unsere Inhalte sind keine Steuer-, Finanz- oder Rechtsberatung. Bitte ziehe für individuelle Fragen Fachleute hinzu." },
     { q: "Wie aktuell sind die Angebote?", a: "Wir prüfen und aktualisieren unsere Vergleiche regelmäßig. Konditionen können sich ändern – bitte immer beim Anbieter verifizieren." },
@@ -73,8 +81,26 @@ export default async function HomePage() {
         <TrustBadges />
       </div>
 
-      {/* Kategorien */}
+      {/* So funktioniert es – Illustrations-Band */}
       <section className="container-page py-16">
+        <SectionHeader eyebrow="Vergleichen. Entscheiden. Sparen." title="So funktioniert DeltaVergleich" center />
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {STEPS.map(({ Scene, step, title, text }) => (
+            <div key={step} className="card-flat group text-center">
+              <div className="relative mx-auto overflow-hidden rounded-xl bg-gradient-to-b from-brand-50 to-white">
+                <Scene className="mx-auto h-40 w-full transition group-hover:scale-[1.03]" />
+                <span className="absolute left-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-brand-gradient text-xs font-bold text-white">{step}</span>
+              </div>
+              <h3 className="mt-5 text-lg font-bold text-ink-900">{title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Kategorien */}
+      <section className="bg-gradient-to-b from-white to-ink-50">
+        <div className="container-page py-16">
         <SectionHeader
           eyebrow="16 Bereiche"
           title="Kategorien"
@@ -85,6 +111,7 @@ export default async function HomePage() {
           {categories.map((c) => (
             <CategoryCard key={c.id} name={c.name} slug={c.slug} description={c.description} icon={c.icon} offerCount={c._count.offers} />
           ))}
+        </div>
         </div>
       </section>
 
@@ -98,19 +125,25 @@ export default async function HomePage() {
             action={{ href: "/vergleich", label: "Alle Vergleiche" }}
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {topComparisons.map((c, i) => (
-              <Link key={c.id} href={`/vergleich/${c.slug}`} className="card group">
-                <div className="flex items-center justify-between">
-                  <span className="badge-brand">{c.category?.name ?? "Vergleich"}</span>
-                  {i < 2 && <span className="badge-accent">Beliebt</span>}
-                </div>
-                <h3 className="mt-3 text-lg font-bold text-ink-900">{c.title}</h3>
-                <p className="mt-2 line-clamp-2 text-sm text-ink-600">{c.metaDescription}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
-                  Vergleich öffnen <span className="transition group-hover:translate-x-0.5">→</span>
-                </span>
-              </Link>
-            ))}
+            {topComparisons.map((c, i) => {
+              const v = getCategoryVisual(c.category?.slug ?? "");
+              return (
+                <Link key={c.id} href={`/vergleich/${c.slug}`} className="card group relative overflow-hidden p-0">
+                  <div className={`relative h-20 bg-gradient-to-br ${v.gradient}`}>
+                    <span className="absolute right-3 top-3 text-3xl text-white/40">{v.glyph}</span>
+                    {i < 2 && <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-0.5 text-xs font-bold text-ink-800">Beliebt</span>}
+                  </div>
+                  <div className="p-6">
+                    <span className="badge-neutral">{c.category?.name ?? "Vergleich"}</span>
+                    <h3 className="mt-2 text-lg font-bold text-ink-900">{c.title}</h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-ink-600">{c.metaDescription}</p>
+                    <span className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold ${v.text}`}>
+                      Vergleich öffnen <span className="transition group-hover:translate-x-0.5">→</span>
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
